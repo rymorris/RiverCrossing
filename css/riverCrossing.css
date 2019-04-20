@@ -119,7 +119,6 @@ section h2 {
   font-weight: 700;
   font-family: 'Poppins';
   height: 80px;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 #mainNav .navbar-brand {
@@ -187,7 +186,7 @@ section h2 {
     transition: font-size 0.3s;
   }
   #mainNav .navbar-brand .logo {
-    height: 40px;
+    height: 35px;
   }
   #mainNav .navbar-nav {
     margin-top: 0;
@@ -206,14 +205,16 @@ section h2 {
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 60px;
+    border-bottom: 1px solid #e6e6e6;
   }
-  #mainNav.navbar-shrink.Alt {
+  #mainNav.navbar-shrinkAlt {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 80px;
     position: sticky;
+    border-bottom: 1px solid #e6e6e6;
   }
   #mainNav.navbar-shrink .navbar-brand .logo {
     opacity: 1 !important;
@@ -315,7 +316,7 @@ header.masthead h2 {
     display: none;
   }
   form .form-group #textinput {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 400;
     color: black !important;
     text-align: center;
@@ -369,11 +370,11 @@ header.masthead h2 {
 }
 
 .portfolio h2 {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
 }
 .portfolio p {
-  font-size: 28px;
+  font-size: 25px;
   max-width: 800px;
   text-align: left;
   margin-left: auto;
@@ -486,7 +487,7 @@ header.masthead h2 {
   }
 
   .indexContentOne .textBlock p {
-    margin: 40px auto 40px auto;
+    margin: 35px auto 35px auto;
     width: 90%;
   }
   .indexContentOne .textBlock .btn {
@@ -555,7 +556,7 @@ header.masthead h2 {
     background-size: 110%;
   }
   .indexContentTwo .textBlock p {
-    margin: 40px auto 40px auto;
+    margin: 35px auto 35px auto;
     width: 90%;
   }
   .indexContentTwo .textBlock .btn {
@@ -634,7 +635,7 @@ header.masthead h2 {
 
 
   .indexContentThree .textBlock p {
-    margin: 40px auto 40px auto;
+    margin: 35px auto 35px auto;
     width: 90%;
   }
   .indexContentThree .textBlock .btn {
@@ -769,14 +770,14 @@ a:focus, a:hover, a:active {
 }
 
 .btn {
-  font-weight: bold;
+  font-weight: 600;
   padding: 0.35rem 1.35rem;
   text-transform: none;
   background: none;
   border-radius: 50px !important;
   border: 3px solid #ca191a;
   color: #ca191a;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 .btn:hover {
