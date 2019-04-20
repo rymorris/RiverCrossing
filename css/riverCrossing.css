@@ -156,6 +156,17 @@ section h2 {
   border-radius: 50px !important;
   border: 3px solid #ffffff;
 }
+/* alt  */
+#mainNav .navbar-togglerAlt {
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-transform: none;
+  background: none !important;
+  border-radius: 50px !important;
+  border: 3px solid #ca191a;
+  color: #ca191a !important;
+}
 
 #mainNav .navbar-toggler.menu-close {
   color: #ca191a !important;
@@ -169,6 +180,7 @@ section h2 {
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: all .4s ease;
   }
+
   #mainNav .navbar-brand {
     font-size: 2em;
     -webkit-transition: font-size 0.3s;
@@ -194,6 +206,14 @@ section h2 {
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 60px;
+  }
+  #mainNav.navbar-shrinkAlt {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #ffffff !important;
+    transition: all .4s ease;
+    height: 80px;
+    position: sticky;
   }
   #mainNav.navbar-shrink .navbar-brand .logo {
     opacity: 1 !important;
@@ -268,6 +288,52 @@ header.masthead h2 {
   transform: scale(1.1);
   transition: all .4s ease;
 }
+/* When Page */
+.whenHeroRight {
+  padding: 20vh 0 0 20px;
+  background-color: transparent;
+}
+
+.whenHeroLeft {
+  padding: 20vh 20px 0 0;
+  background-color: transparent;
+}
+
+/* FORMS */
+.formLong {
+  min-height: 40vh;
+}
+
+  /* Nominate Page */
+  form .form-group {
+    max-width: 800px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  form .form-group label {
+    display: none;
+  }
+  form .form-group #textinput {
+    font-size: 28px;
+    font-weight: 400;
+    color: black !important;
+    text-align: center;
+    padding: 2.25rem;
+    border: 4px solid;
+    border-radius: 0px;
+  }
+
+  /* Contact Page */
+  .contactForm .row {
+    flex-flow: row;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contactForm .row .form-group{
+    flex-flow: column;
+  }
 /* @media screen and (max-width: 576px) { */
   @media screen and (max-width: 768px) {
   .indexHeroRight {
