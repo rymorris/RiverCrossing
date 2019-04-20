@@ -1,4 +1,13 @@
 (function($) {
+  $("#navbarReplaceJs").load("template/navbar.html");
+  // mobile menu slide from the left
+  $('[data-toggle="slide-collapse"]').on('click', function() {
+      $navMenuCont = $($(this).data('target'));
+      $navMenuCont.animate({'width':'toggle'}, 350);
+      $('.navbar-toggler').toggleClass('menu-close');
+      $('.navbar-toggler span').toggleClass('d-none');
+  });
+
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
@@ -14,15 +23,7 @@
       }
     }
   });
-  // mobile menu slide from the left
-  $('[data-toggle="slide-collapse"]').on('click', function() {
-      $navMenuCont = $($(this).data('target'));
-      $navMenuCont.animate({'width':'toggle'}, 350);
-      $('.navbar-toggler').toggleClass('menu-close');
-      $('.navbar-toggler span').toggleClass('d-none');
-  });
 
-  $("#navbarReplaceJs").load("template/navbar.html"); 
 
 
   // Scroll to top button appear
