@@ -127,7 +127,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   letter-spacing: 0.0625rem;
 }
 
@@ -157,7 +157,7 @@ section h2 {
   border: 3px solid #ffffff;
 }
 /* alt  */
-#mainNav .navbar-togglerAlt {
+#mainNav .navbar-toggler.Alt {
   font-size: 80%;
   font-weight: bold;
   padding: 0.5rem 1rem;
@@ -207,7 +207,7 @@ section h2 {
     transition: all .4s ease;
     height: 60px;
   }
-  #mainNav.navbar-shrinkAlt {
+  #mainNav.navbar-shrink.Alt {
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #ffffff !important;
