@@ -15,6 +15,7 @@
     }
   });
 
+    $("#navbarReplaceJs").load("template/navbar.html"); 
 
 
   // Scroll to top button appear
