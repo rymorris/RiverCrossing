@@ -467,6 +467,7 @@ header.masthead h2 {
   float: left;
   width: 100%;
   position: relative;
+  left: 20px;
 }
 
 .indexContentOne .textBlock .btn {
@@ -481,7 +482,7 @@ header.masthead h2 {
   position: relative;
   max-width: 500px;
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1024px) {
   .indexContentOne .imageBlock{
     text-align: center;
   }
@@ -654,6 +655,7 @@ header.masthead h2 {
     right: 50px;
     top: 50px;
     max-width: 500px;
+    left: 30px;
   }
 }
 
