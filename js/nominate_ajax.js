@@ -12,6 +12,7 @@ $('#nominationSubmit').on('click', function(e) {
     dataType: "json",
     data: $form.serializeObject()
   }).success(
+    console.log('success!');
     // do something
   );
 })
