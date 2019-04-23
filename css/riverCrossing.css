@@ -5,6 +5,7 @@
 
 body {
   font-family: 'Poppins';
+  overflow-x: hidden;
 }
 
 h1,
@@ -200,8 +201,7 @@ section h2 {
     background: #ca191a;
   }
   #mainNav.navbar-shrink {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 0;
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 60px;
@@ -447,6 +447,14 @@ header.masthead h2 {
   }
 }
 
+.imageBlock {
+  min-height: 500px !important;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .imageBlock img {
+    padding-top: 20% !important;
+  }
+}
 .indexContentOne .row {
   display: inline-block;
   min-height: 500px;
@@ -476,8 +484,8 @@ header.masthead h2 {
 }
 
 .indexContentOne .textBlock p {
-  font-size: 1.75rem;
-  line-height: 2rem;
+  font-size: 35px;
+  line-height: 40px;
   font-weight: bold;
   position: relative;
   max-width: 500px;
@@ -545,8 +553,8 @@ header.masthead h2 {
 }
 
 .indexContentTwo .textBlock p {
-  font-size: 1.75rem;
-  line-height: 2rem;
+  font-size: 35px;
+  line-height: 40px;
   font-weight: bold;
   position: relative;
   max-width: 500px;
@@ -612,6 +620,7 @@ header.masthead h2 {
   float: left;
   width: 100%;
   position: relative;
+  left: 20px;
 }
 
 .indexContentThree .textBlock .btn {
@@ -620,7 +629,7 @@ header.masthead h2 {
 }
 
 .indexContentThree .textBlock p {
-  font-size: 1.75rem;
+  font-size: 35px;
   line-height: 2rem;
   font-weight: bold;
   position: relative;
@@ -628,13 +637,11 @@ header.masthead h2 {
 }
 
 .indexContentThree .textBlock span {
-  font-size: 1.1rem;
-  line-height: .9rem;
+  font-size: 25px;
+  line-height: 28px;
   font-weight: lighter;
 }
 @media screen and (max-width: 990px) {
-
-
   .indexContentThree .textBlock p {
     margin: 35px auto 35px auto;
     width: 90%;
@@ -725,7 +732,7 @@ form .row:first-child .floating-label-form-group {
   padding: 0 !important
 }
 .footer h4 {
-  font-size: 1.75rem;
+  font-size: 35px;
 }
 .footer .row {
   max-width: none;
