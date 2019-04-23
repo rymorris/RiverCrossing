@@ -10,9 +10,9 @@ $('#nominationSubmit').on('click', function(e) {
     url: url,
     method: "GET",
     dataType: "json",
-    data: $form.serializeObject()
-  }).success(
-    console.log('success!');
-    // do something
-  );
+    data: $form.serializeObject(),
+    success:function(data) {
+    console.log('success');
+  }
+  });
 })
