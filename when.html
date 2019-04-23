@@ -33,42 +33,32 @@
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
           <img class="logo mx-auto" src="img/riverCrossingLogo.svg" alt="" style="opacity: 1;">
         </a>
-        <button class="navbar-togglerAlt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler Alt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span>Menu</span>
         <span class="d-none">x</span>
         <!-- <i class="fas fa-bars"></i> -->
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">What</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">When</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Where</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Why</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Who</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Nominate Someone</a>
-          </li>
-        </ul>
+        <div id="navbarReplaceJs"></div>
       </div>
+
+
     </div>
   </nav>
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
-    <div class="row" style="width: calc(100vw + 30px);">
-      <div class="imageBlock">
-          <img class="col-12" src="img/when.png" alt="">
+    <div class="heroContentWhen">
+      <div class="row" style="width: calc(100vw + 30px);">
+        <!-- Hero Image -->
+        <div class="imageBlock heroImgWhen">
+        </div>
+        <div class="col-md-12 col-lg-12 col-12 textOverlay">
+          <h2 class="col-md-6 col-lg-6 col-6">West Sacramento</h2>
+          <h2 class="col-md-3 col-lg-3 col-3"></h2>
+          <h2 class="col-md-6 col-lg-6 col-6">Sacramento</h2>
        </div>
+      </div>
     </div>
   </header>
 
@@ -78,7 +68,7 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <p>
-        The competition to find two people whose names will become that of the public dock in Sacramento or West Sacramento <b>opened on 25th May 2019. Submissions will close on 10th July 2019.</b> 
+        The competition to find two people whose names will become that of the public dock in Sacramento or West Sacramento <b>opened on 25th May 2019. Submissions will close on 10th July 2019.</b>
       </p>
       <br>
       <div class="text-center">
@@ -88,19 +78,19 @@
       </div>
       <br><br>
       <p>
-        During this time you can send us the name of the person you wish to nominate. As well as letting us know the name you propose, you should tell us why in up to 250 words. 
+        During this time you can send us the name of the person you wish to nominate. As well as letting us know the name you propose, you should tell us why in up to 250 words.
       </p>
       <br>
       <h2 class="text-center mb-0">
-        We want to build up a 
+        We want to build up a
         <br>
         biography of the people of
         <br>
-        Sacramento and West Sacramento. 
+        Sacramento and West Sacramento.
         <br><br>
       </h2>
       <p>
-        After the call for nominations closes, the judges will select two names to be commemorated. One name will be chosen for the public dock in Sacramento and the other for the public dock in West Sacramento. 
+        After the call for nominations closes, the judges will select two names to be commemorated. One name will be chosen for the public dock in Sacramento and the other for the public dock in West Sacramento.
       </p>
       <br>
       <p>
@@ -170,16 +160,8 @@
   <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/riverCrossing.min.js"></script>
-  <Script>
-  // mobile menu slide from the left
-  $('[data-toggle="slide-collapse"]').on('click', function() {
-      $navMenuCont = $($(this).data('target'));
-      $navMenuCont.animate({'width':'toggle'}, 350);
-      $('.navbar-toggler').toggleClass('menu-close');
-      $('.navbar-toggler span').toggleClass('d-none');
-  });
-  </script>
+  <script src="js/riverCrossing.js"></script>
+
 
 </body>
 

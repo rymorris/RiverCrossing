@@ -33,43 +33,29 @@
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
           <img class="logo mx-auto" src="img/riverCrossingLogo.svg" alt="" style="opacity: 1;">
         </a>
-        <button class="navbar-togglerAlt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler Alt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span>Menu</span>
         <span class="d-none">x</span>
         <!-- <i class="fas fa-bars"></i> -->
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">What</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">When</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Where</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Why</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Who</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Nominate Someone</a>
-          </li>
-        </ul>
+        <div id="navbarReplaceJs"></div>
       </div>
     </div>
   </nav>
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
-    <div class="row" style="width: calc(100vw + 30px);">
-      <div class="imageBlock">
-        <img class="col-12" src="img/what.png" alt="">
-     </div>
-    </div>
+    <div class="heroContentWhat">
+      <div class="row" style="width: calc(100vw + 30px);">
+        <!-- Hero Image -->
+        <div class="imageBlock heroImgWhat">
+        </div>
+       <div class="col-md-12 col-lg-12 col-12 textOverlay">
+          <h2 class="text-uppercase">Who do you want our role models to be? </h2>
+       </div>
+      </div>
+  </div>
   </header>
 
 
@@ -96,7 +82,7 @@
       </div>
       <br><br>
       <p>
-        Anyone from anywhere in the world can suggest the name of someone meaningful to them but we are particularly interested to receive nominations that have a connection to the cities of Sacramento and West Sacramento. 
+        Anyone from anywhere in the world can suggest the name of someone meaningful to them but we are particularly interested to receive nominations that have a connection to the cities of Sacramento and West Sacramento.
       </p>
       <br>
       <p>
@@ -170,16 +156,8 @@
   <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/riverCrossing.min.js"></script>
-  <Script>
-  // mobile menu slide from the left
-  $('[data-toggle="slide-collapse"]').on('click', function() {
-      $navMenuCont = $($(this).data('target'));
-      $navMenuCont.animate({'width':'toggle'}, 350);
-      $('.navbar-toggler').toggleClass('menu-close');
-      $('.navbar-toggler span').toggleClass('d-none');
-  });
-  </script>
+  <script src="js/riverCrossing.js"></script>
+
 
 </body>
 

@@ -33,42 +33,28 @@
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
           <img class="logo mx-auto" src="img/riverCrossingLogo.svg" alt="" style="opacity: 1;">
         </a>
-        <button class="navbar-togglerAlt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler Alt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span>Menu</span>
         <span class="d-none">x</span>
         <!-- <i class="fas fa-bars"></i> -->
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">What</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">When</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Where</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Why</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Who</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Nominate Someone</a>
-          </li>
-        </ul>
+        <div id="navbarReplaceJs"></div>
       </div>
     </div>
   </nav>
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
-    <div class="row" style="width: calc(100vw + 30px);">
-      <div class="imageBlock">
-        <img class="col-12" src="img/nominate.png" alt="">
-     </div>
+    <div class="heroContentNom">
+      <div class="row" style="width: calc(100vw + 30px);">
+        <!-- Hero Image -->
+        <div class="imageBlock heroImgNom">
+        </div>
+        <div class="col-md-12 col-lg-12 col-12 textOverlay">
+          <h2 class="text-uppercase"> It could be your beloved grandma, your best <br>school friend, a neighbor; it could even be you! </h2>
+       </div>
+      </div>
     </div>
   </header>
 
@@ -78,7 +64,7 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <p>
-        As well as letting us know the name you propose, you should tell us why in up to 250 words. 
+        As well as letting us know the name you propose, you should tell us why in up to 250 words.
       </p>
       <br>
       <p>
@@ -109,7 +95,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>  
+          <label class="col-md-4 control-label" for="textinput"></label>
           <div class="col-md-12">
           <input id="textinput" name="textinput" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
           </div>
@@ -117,9 +103,9 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>  
+          <label class="col-md-4 control-label" for="textinput"></label>
           <div class="col-md-12">
-          <input id="textinput" name="textinput" type="text" placeholder="Tell us why in up to 250 words." class="form-control input-md formLong">   
+          <input id="textinput" name="textinput" type="text" placeholder="Tell us why in up to 250 words." class="form-control input-md formLong">
           </div>
         </div>
         <br>
@@ -131,7 +117,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>  
+          <label class="col-md-4 control-label" for="textinput"></label>
           <div class="col-md-12">
           <input id="textinput" name="textinput" type="text" placeholder="Your name" class="form-control input-md" required="">
           </div>
@@ -154,7 +140,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>  
+          <label class="col-md-4 control-label" for="textinput"></label>
           <div class="col-md-12">
           <input id="textinput" name="textinput" type="text" placeholder="Your phone number" class="form-control input-md">
           </div>
@@ -162,7 +148,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>  
+          <label class="col-md-4 control-label" for="textinput"></label>
           <div class="col-md-12">
           <input id="textinput" name="textinput" type="text" placeholder="Your zip code" class="form-control input-md">
           </div>
@@ -170,7 +156,7 @@
 
         <!-- Text input-->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>  
+          <label class="col-md-4 control-label" for="textinput"></label>
           <div class="col-md-12">
           <input id="textinput" name="textinput" type="text" placeholder="Your email address" class="form-control input-md">
           </div>
@@ -244,16 +230,8 @@
   <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/riverCrossing.min.js"></script>
-  <Script>
-  // mobile menu slide from the left
-  $('[data-toggle="slide-collapse"]').on('click', function() {
-      $navMenuCont = $($(this).data('target'));
-      $navMenuCont.animate({'width':'toggle'}, 350);
-      $('.navbar-toggler').toggleClass('menu-close');
-      $('.navbar-toggler span').toggleClass('d-none');
-  });
-  </script>
+  <script src="js/riverCrossing.js"></script>
+
 
 </body>
 
