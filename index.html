@@ -39,26 +39,7 @@
         <!-- <i class="fas fa-bars"></i> -->
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">What</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">When</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Where</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Why</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Who</a>
-          </li>
-          <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Nominate Someone</a>
-          </li>
-        </ul>
+        <div id="navbarReplaceJs"></div>
       </div>
     </div>
   </nav>
@@ -104,11 +85,11 @@
 
   <section class="indexContentOne p-0">
     <div class="row" style="width: calc(100vw + 15px);">
-      <div class="col-lg-6 col-12 imageBlock">
+      <div class="col-lg-6 col-md-6 col-12 imageBlock">
         <img class="" src="img/indexBlockOne.png" alt="" >
 
       </div>
-      <div class="col-lg-6 col-12 textBlock">
+      <div class="col-lg-6 col-md-6 col-12 textBlock">
         <p>We want to build up a biography of the people of Sacramento and West Sacramento.
           <br><br>
           Submissions are open <br>May 25th–July 10th, 2019
@@ -125,11 +106,11 @@
 
   <section class="indexContentTwo p-0">
     <div class="row" style="width: calc(100vw + 15px);">
-      <div class="col-lg-6 col-12 imageBlock" style="background-image: url('img/indexBlockTwo.png')">
+      <div class="col-lg-6 col-md-6 col-12 imageBlock" style="background-image: url('img/indexBlockTwo.png')">
         <!-- <img class="" src="img/indexBlockTwo.png" alt="" > -->
 
       </div>
-      <div class="col-lg-6 col-12 textBlock">
+      <div class="col-lg-6 col-md-6 col-12 textBlock">
         <p>The public docks face each other across the Sacramento River between Tower Bridge and the I-Street Bridge.
           <br>
 
@@ -144,11 +125,11 @@
 
   <section class="indexContentThree p-0">
     <div class="row" style="width: calc(100vw + 15px);">
-      <div class="col-lg-6 col-12 imageBlock" style="background-image: url('img/indexBlockThree.png')">
+      <div class="col-lg-6 col-md-6 col-12 imageBlock" style="background-image: url('img/indexBlockThree.png')">
         <!-- <img class="" src="img/indexBlockThree.png" alt="" > -->
 
       </div>
-      <div class="col-lg-6 col-12 textBlock">
+      <div class="col-lg-6 col-md-6 col-12 textBlock">
         <p>Why RIVER CROSSING?
           <br><br>
           <span>What does it mean to be a citizen worthy of praise? In today’s celebrity culture, who do we want our role models to be? Who are the important people we have forgotten? Who among your family and friends have been most supportive and transformative?</span>
@@ -169,21 +150,21 @@
   <footer class="footer text-center">
     <div class="container">
       <div class="row">
-        <div class="col-md-3 col-lg-3 col-6 text-left footerLink">
+        <div class="col-lg-3 col-6 text-left footerLink">
           <h4 class="text-uppercase mb-2">LEARN</h4>
           <p class="lead mb-0">MORE ABOUT
             <br>RIVER CROSSING</p>
         </div>
-        <div class="col-md-3 col-lg-3 col-6 text-left footerLink">
+        <div class="col-lg-3 col-6 text-left footerLink">
           <h4 class="text-uppercase mb-2">READ THE</h4>
           <p class="lead mb-0">STORY BEHIND
             <br>THE DOCKS</p>
         </div>
-        <div class="col-md-3 col-lg-3 col-6 text-left footerLink">
+        <div class="col-lg-3 col-6 text-left footerLink">
           <h4 class="text-uppercase mb-2">SEE</h4>
           <p class="lead mb-0">YOUR NAME IN THE MARITIME ALPHABET</p>
         </div>
-        <div class="col-md-3 col-lg-3 col-6 text-left footerLink">
+        <div class="col-lg-3 col-6 text-left footerLink">
           <h4 class="text-uppercase mb-2">NOMINATE</h4>
           <p class="lead mb-0">SOMEONE</p>
         </div>
@@ -220,16 +201,7 @@
   <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/riverCrossing.min.js"></script>
-  <Script>
-  // mobile menu slide from the left
-  $('[data-toggle="slide-collapse"]').on('click', function() {
-      $navMenuCont = $($(this).data('target'));
-      $navMenuCont.animate({'width':'toggle'}, 350);
-      $('.navbar-toggler').toggleClass('menu-close');
-      $('.navbar-toggler span').toggleClass('d-none');
-  });
-  </script>
+  <script src="js/riverCrossing.js"></script>
 
 </body>
 
