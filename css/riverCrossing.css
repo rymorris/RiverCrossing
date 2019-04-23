@@ -268,6 +268,21 @@ header.masthead h2 {
   background-color: #f8c900;
 }
 
+/* Hero Text */
+.textOverlay {
+  position: absolute;
+  top: 120px;
+  left: 0px;
+  text-align: center;
+  color: #000;
+
+}
+.textOverlay H1{
+  color: #000;
+  font-size: 1.5em;
+}
+
+
 .colon {
   top: 35vh;
   z-index: 21;
@@ -289,15 +304,76 @@ header.masthead h2 {
   transform: scale(1.1);
   transition: all .4s ease;
 }
-/* When Page */
-.whenHeroRight {
-  padding: 20vh 0 0 20px;
-  background-color: transparent;
+
+/* What Page */
+/* Center and set hero image */
+.heroContentWhat .imageBlock {
+  text-align: center;
+  background-color: #f8c900;
+  height: calc(100vh - 80px);
+}
+.heroImgWhat {
+  background: white url(../img/what.png) no-repeat center;
+  width: calc(100vw + 30px);
+  background-size: calc(100vw - 30%);
 }
 
-.whenHeroLeft {
-  padding: 20vh 20px 0 0;
-  background-color: transparent;
+/* When Page */
+/* Center and set hero image */
+.heroContentWhen .imageBlock {
+  text-align: center;
+  background-color: #f8c900;
+  height: calc(100vh - 80px);
+}
+.heroImgWhen {
+  background: white url(../img/when.png) no-repeat center;
+  width: calc(100vw + 30px);
+  background-size: 100vw;
+}
+/* Align West Sacramento and Sacramento text */
+.heroContentWhen .textOverlay {
+  display: inline-flex;
+  justify-content: space-evenly;
+  color: #ca191a;
+  line-height: 2em;
+}
+.heroContentWhen .textOverlay h2:nth-child(1) {
+  background-color: #f8c900;
+  text-align: right;
+}
+.heroContentWhen .textOverlay h2:nth-child(3) {
+  background-color: #f8c900;
+  text-align: left;
+}
+
+/* Nominate Page */
+@media (min-width: 990px) {
+  /* Center and set hero image */
+  .heroContentNom .imageBlock {
+    text-align: center;
+    background-color: #f8ce08;
+    height: calc(100vh - 80px);
+  }
+  .heroImgNom {
+    background: white url(../img/Nominate.png) no-repeat center bottom;
+    width: calc(100vw + 30px);
+    background-size: calc(100vw - 20%);
+  }
+}
+.heroContentNom .imageBlock {
+  text-align: center;
+  background-color: #f8ce08;
+  height: calc(100vh - 80px);
+}
+.heroImgNom {
+  background: white url(../img/Nominate.png) no-repeat center;
+  width: calc(100vw + 30px);
+  background-size: calc(100vw - 20%);
+}
+
+.textOverlay h2 {
+  width: 80%;
+  margin: 0 auto;
 }
 
 /* FORMS */
