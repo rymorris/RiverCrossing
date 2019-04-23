@@ -58,6 +58,9 @@
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
+      <div id="nomination_name">
+
+      </div>
       <p>
         As well as letting us know the name you propose, you should tell us why in up to 250 words.
       </p>
@@ -228,7 +231,27 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>
+  <script type="text/javascript">
+  let paramsString = window.location.search;
+  let searchParams = new URLSearchParams(paramsString);
 
+  var nomination_name = searchParams.get("nomination_name");
+  var nomination_reason = searchParams.get("nomination_reason");
+  var submitter_name = searchParams.get("submitter_name");
+  console.log(nomination_name);
+  console.log(nomination_reason);
+
+  for (var i = 0; i < nomination_name.length; i++) {
+    console.log(nomination_name.charAt(i));
+
+    var img = document.createElement("img");
+    img.src = "maritime/" + nomination_name.charAt(i) + ".svg";
+    img.className = "maritime";
+
+    var src = document.getElementById("nomination_name");
+    src.appendChild(img);
+  }
+  </script>
 
 </body>
 

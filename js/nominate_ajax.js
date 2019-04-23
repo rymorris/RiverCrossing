@@ -12,9 +12,8 @@ $('#nominationSubmit').on('click', function(e) {
     dataType: "json",
     data: $form.serializeObject(),
     success:function(data) {
-      console.log($form.serializeObject;
     console.log('success');
-    window.location.href = '/nomination?nomiation_name='
+    window.location.href = 'nomination?nomination_name=' + data.nomination_name + "&nomination_reason=" + data.nomination_reason + "&submitter_name=" + data.submitter_name;
   }
   });
 })

@@ -830,3 +830,14 @@ a:focus, a:hover, a:active {
   background-color: #1a252f;
   border-color: #1a252f;
 }
+
+#nomination_name {
+  width: 100%;
+  display: inline-flex;
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#nomination_name .maritime{
+padding: 10px;
+}
