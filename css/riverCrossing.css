@@ -843,10 +843,14 @@ form .row:first-child .floating-label-form-group {
   font-weight: lighter !important;
 }
 .footer .footerLink {
+  text-decoration: none;
+  color: #ffffff;
   padding: 2.5rem 2.5rem 7.5rem 2.5rem;
 }
 .footer .footerLink:hover {
   background-color: #ca191a;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .contact-button {
