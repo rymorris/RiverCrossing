@@ -1,5 +1,7 @@
 (function($) {
   $("#navbarReplaceJs").load("template/navbar.html");
+
+  $("#footerReplaceJs").load("template/footer.html");
   // mobile menu slide from the left
   $('[data-toggle="slide-collapse"]').on('click', function() {
       $navMenuCont = $($(this).data('target'));
