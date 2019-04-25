@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top text-uppercase navbar-shrinkAlt" id="mainNav" style="background: #fff;">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <a class="navbar-brand js-scroll-trigger" href="index">
           <img class="logo mx-auto" src="img/riverCrossingLogo.svg" alt="" style="opacity: 1;">
         </a>
         <button class="navbar-toggler Alt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,7 +96,7 @@
             <div class="form-group ">
               <label class="col-md-4 control-label" for="textinput"></label>
               <div class="col-md-12">
-              <input id="textinput" name="textinput" type="text" placeholder="Name" class="form-control input-md" required="">
+              <input id="textinput" name="name" type="text" placeholder="Name" class="form-control input-md" required="">
               </div>
             </div>
 
@@ -104,7 +104,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="textinput"></label>
               <div class="col-md-12">
-              <input id="textinput" name="textinput" type="text" placeholder="Phone" class="form-control input-md">
+              <input id="textinput" name="phone" type="text" placeholder="Phone" class="form-control input-md">
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="textinput"></label>
                 <div class="col-md-12">
-                <input id="textinput" name="textinput" type="text" placeholder="Email" class="form-control input-md" required="">
+                <input id="textinput" name="email" type="text" placeholder="Email" class="form-control input-md" required="">
                 </div>
               </div>
 
@@ -132,12 +132,13 @@
           <div class="form-group">
             <label class="col-md-4 control-label" for="textinput"></label>
             <div class="col-md-12">
-            <input id="textinput" name="textinput" type="text" placeholder="Message" class="form-control input-md formLong">
+            <input id="textinput" name="message" type="text" placeholder="Message" class="form-control input-md formLong">
 
             </div>
           </div>
 
           <!-- Button -->
+          <div id="success"></div>
           <div class="form-group">
             <label class="col-md-4 control-label" for="contactSubmit"></label>
             <div class="text-right">

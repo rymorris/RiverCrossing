@@ -3,6 +3,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/master/LICENSE)
  */
 
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Poppins';
   overflow-x: hidden;
@@ -512,7 +515,7 @@ header.masthead h2 {
   font-size: 1rem;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .portfolio-modal .portfolio-modal-dialog {
     min-height: 100vh;
     padding: 5rem;
@@ -521,6 +524,11 @@ header.masthead h2 {
   .portfolio-modal .portfolio-modal-dialog h2 {
     font-size: 1rem;
   }
+}
+@media screen and (max-width: 990px) {
+.portfolio .container p{
+  text-align: center;
+}
 }
 
 .imageBlock {
@@ -551,7 +559,6 @@ header.masthead h2 {
   float: left;
   width: 100%;
   position: relative;
-  left: 20px;
 }
 
 .indexContentOne .textBlock .btn {
@@ -566,7 +573,7 @@ header.masthead h2 {
   position: relative;
   max-width: 500px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 990px) {
   .indexContentOne .imageBlock{
     text-align: center;
   }
@@ -575,9 +582,12 @@ header.masthead h2 {
     margin: 35px auto 35px auto;
     width: 90%;
   }
+  .indexContentOne .textBlock p {
+    text-align: center;
+  }
   .indexContentOne .textBlock .btn {
-    margin-left: 35%;
-    margin-top: 30px;
+    text-align: center;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 990px) {
@@ -586,6 +596,9 @@ header.masthead h2 {
     max-width: 400px;
     padding: 20px;
   }
+    .indexContentOne .textBlock{
+      right: 20px;
+    }
   .indexContentOne .textBlock p {
     position: absolute;
     right: 50px;
@@ -640,19 +653,25 @@ header.masthead h2 {
   .indexContentTwo .imageBlock {
     background-size: 110%;
   }
+  .indexContentTwo .textBlock  {
+    text-align: center;
+  }
   .indexContentTwo .textBlock p {
     margin: 35px auto 35px auto;
     width: 90%;
+    text-align: left;
   }
   .indexContentTwo .textBlock .btn {
-    margin-left: 35%;
-    margin-top: 30px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 990px) {
   .indexContentTwo .imageBlock{
     text-align: center;
     background-size: 140%;
+  }
+  .indexContentTwo .textBlock{
+    left: 20px;
   }
   .indexContentTwo .imageBlock img{
     max-width: 700px;
@@ -696,7 +715,6 @@ header.masthead h2 {
   float: left;
   width: 100%;
   position: relative;
-  left: 20px;
 }
 
 .indexContentThree .textBlock .btn {
@@ -718,16 +736,22 @@ header.masthead h2 {
   font-weight: lighter;
 }
 @media screen and (max-width: 990px) {
+  .indexContentThree .textBlock {
+    text-align: center;
+  }
   .indexContentThree .textBlock p {
     margin: 35px auto 35px auto;
     width: 90%;
+    text-align: left;
   }
   .indexContentThree .textBlock .btn {
-    margin-left: 35%;
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 990px) {
+  .indexContentThree .textBlock{
+    right: 20px;
+  }
   .indexContentThree .imageBlock img{
     width: 75%;
     max-width: 400px;
@@ -738,7 +762,6 @@ header.masthead h2 {
     right: 50px;
     top: 50px;
     max-width: 500px;
-    left: 30px;
   }
 }
 
@@ -916,4 +939,94 @@ a:focus, a:hover, a:active {
 }
 #nomination_name .maritime{
 padding: 10px;
+}
+
+#nomination_name_maritime div{
+  width: 100%;
+  display: inline-flex;
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#nomination_name_maritime div .maritime{
+padding: 10px;
+}
+
+
+label.control-label  {
+  font-size: 25px;
+    font-weight: 400;
+    color: black !important;
+    text-align: center;
+    /* padding: 2.25rem;
+    border: 4px solid;
+    border-radius: 0px; */
+}
+/* Customize the label (the container) */
+.checkbox-inline {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-inline input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+  border: 4px solid;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-inline:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-inline input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox-inline:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-inline input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-inline .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

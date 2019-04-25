@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top text-uppercase navbar-shrinkAlt" id="mainNav" style="background: #fff;">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <a class="navbar-brand js-scroll-trigger" href="index">
           <img class="logo mx-auto" src="img/riverCrossingLogo.svg" alt="" style="opacity: 1;">
         </a>
         <button class="navbar-toggler Alt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,6 +65,15 @@
       <p>
         Type in your name here to see it in the international maritime signal flag alphabet.
       </p>
+      <form class="form-horizontal" id="nominate">
+      <div class="form-group mt-5">
+        <label class="col-md-4 control-label" for="textinput"></label>
+        <div class="col-md-12">
+        <input id="textinput" name="nomination_name" oninput="inputToMaritime(this.value)" pattern="[a-z]" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
+        </div>
+      </div>
+      <div class="" id="nomination_name_maritime"></div>
+    </form>
     </div>
   </section>
 
@@ -121,6 +130,27 @@
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
+  <script type="text/javascript">
+  function inputToMaritime(val) {
+    var word = document.createElement("div");
+    for (var i = 0; i < val.length; i++) {
+      console.log(val.charAt(i));
+
+      var img = document.createElement("img");
+      img.src = "maritime/" + val.charAt(i) + ".svg";
+      img.className = "maritime";
+
+      word.appendChild(img);
+    }
+    var src = document.getElementById("nomination_name_maritime");
+    if (document.getElementById("nomination_name_maritime").firstChild) {
+      var oldName = document.getElementById("nomination_name_maritime").firstChild;
+      src.removeChild(oldName);
+    }
+    src.appendChild(word);
+  // document.getElementById("demo").innerHTML = val;
+}
+  </script>
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>

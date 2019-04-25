@@ -30,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top text-uppercase navbar-shrinkAlt" id="mainNav" style="background: #fff;">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <a class="navbar-brand js-scroll-trigger" href="index">
           <img class="logo mx-auto" src="img/riverCrossingLogo.svg" alt="" style="opacity: 1;">
         </a>
         <button class="navbar-toggler Alt navbar-toggler-right bg-primary text-white rounded btn" type="button" data-toggle="slide-collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,6 +85,7 @@
         <b>Or in person to the boxes in the foyer of the City Hall in Sacramento or West Sacramento.</b>
       </p>
       <br><br>
+      <div class="" id="nomination_name_maritime"></div>
       <form class="form-horizontal" id="nominate">
         <fieldset>
 
@@ -97,7 +98,7 @@
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput"></label>
           <div class="col-md-12">
-          <input id="textinput" name="nomination_name" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
+          <input id="textinput" name="nomination_name" oninput="inputToMaritime(this.value)" pattern="[a-z]" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
           </div>
         </div>
 
@@ -125,14 +126,17 @@
 
         <!-- Multiple Checkboxes (inline) -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="checkboxes">Your age</label>
-          <div class="col-md-4">
-            <label class="checkbox-inline" for="checkboxes-0">
-              <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+          <label class="col-12 control-label text-center d-block" for="checkboxes">Your age</label>
+          <br>
+          <div class="col-12">
+            <label class="checkbox-inline d-inline-block mr-5" for="checkboxes-0">
+              <input type="radio" name="submitter_age" id="checkboxes-0" value="under-18">
+              <span class="checkmark"></span>
               Under 18 (on July 10, 2019)
             </label>
-            <label class="checkbox-inline" for="checkboxes-1">
-              <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+            <label class="checkbox-inline d-inline-block" for="checkboxes-1">
+              <input type="radio" name="submitter_age" id="checkboxes-1" value="over-18">
+              <span class="checkmark"></span>
               18 or over (on July 10, 2019)
             </label>
           </div>
@@ -230,6 +234,27 @@
   <script src="js/jquery.serialize-object.js" charset="utf-8"></script>
   <script src="js/nominate_ajax.js"></script>
   <script src="js/contact_me.js"></script>
+  <script type="text/javascript">
+  function inputToMaritime(val) {
+    var word = document.createElement("div");
+    for (var i = 0; i < val.length; i++) {
+      console.log(val.charAt(i));
+
+      var img = document.createElement("img");
+      img.src = "maritime/" + val.charAt(i) + ".svg";
+      img.className = "maritime";
+
+      word.appendChild(img);
+    }
+    var src = document.getElementById("nomination_name_maritime");
+    if (document.getElementById("nomination_name_maritime").firstChild) {
+      var oldName = document.getElementById("nomination_name_maritime").firstChild;
+      src.removeChild(oldName);
+    }
+    src.appendChild(word);
+  // document.getElementById("demo").innerHTML = val;
+}
+  </script>
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>
