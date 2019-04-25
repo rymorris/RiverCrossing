@@ -23,7 +23,35 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="favicon.ico/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-
+<script src="js/fbShare.js"></script>
+<script src="js/base64binary.js"></script>
+<style type="text/css">
+  .imageBlockHero {
+    position: relative;
+    text-align: center;
+  }
+  .overlay {
+    position: absolute;
+    top: 20vw;
+  }
+  .overlay .maritime {
+    width: 5vw;
+  }
+  #heroName {
+    bottom: 2vw;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 25vh;
+  }
+</style>
   <title>River Crossing | Joshua Sofaer</title>
 
   <!-- Bootstrap core CSS -->
@@ -41,7 +69,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="drawCanvas();">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top text-uppercase navbar-shrinkAlt" id="mainNav" style="background: #fff;">
@@ -64,7 +92,10 @@
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
     <div class="row" style="width: calc(100vw + 30px);">
       <div class="imageBlockHero">
-        <img class="col-12" src="img/nominate.png" alt="">
+        <img class="col-12" src="img/flags.png" alt="">
+        <div id="nomination_name" class="overlay">
+        </div>
+        <h3 id="heroName"></h3>
      </div>
     </div>
   </header>
@@ -74,118 +105,26 @@
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <div id="nomination_name">
 
-      </div>
-      <p>
-        As well as letting us know the name you propose, you should tell us why in up to 250 words.
-      </p>
-      <br>
-      <p>
-        It’s up to you who you choose.
-      </p>
-      <br>
-      <p>
-        <b>You can enter using the form below.</b>
-      </p>
-      <br>
-      <p>
-        <b>Or by mail to:</b><br>
-        River Crossing<br>
-        SMAC 915 I Street, 3rd Floor<br>
-        Sacramento, CA 95814,
-      </p>
-      <p>
-        <b>Or in person to the boxes in the foyer of the City Hall in Sacramento or West Sacramento.</b>
-      </p>
+
       <br><br>
-      <form class="form-horizontal" id="nominate">
-        <fieldset>
 
-        <!-- Form Header -->
-        <legend><h2 class="text-center mb-0">
-          Nomination Form
-        </h2><br></legend>
+        <!-- <div id="fb-root"></div>
+        	<div class="centre">
+        		<h2>Event generator</h2>
+        		<canvas id="canvas" width="430" height="260">
+        		   <p>We apologize, your browser does not support canvas at this time!</p>
+        		</canvas>
+        		<div class="signupbox">
+        			<div><button class="share" onclick="postCanvasToFacebook()">Share event on Facebook</button></div>
+        		</div>
+        		<br/>
+        		<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        		<div class="fb-like" data-href="http://www.heroesgenerator.com/" data-send="true" data-width="450" data-show-faces="true"></div>
+        		<div class="fb-comments" data-href="http://www.heroesgenerator.com/" data-width="430" data-num-posts="10"></div>
+        	</div> -->
 
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
-          <input id="textinput" name="nomination_name" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
-          </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
-          <input id="textinput" name="nomination_reason" type="text" placeholder="Tell us why in up to 250 words." class="form-control input-md formLong">
-          </div>
-        </div>
-        <br>
-
-        <!-- Form Header -->
-        <legend><h2 class="text-center mb-0">
-          About You
-        </h2><br></legend>
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
-          <input id="textinput" name="submitter_name" type="text" placeholder="Your name" class="form-control input-md" required="">
-          </div>
-        </div>
-
-        <!-- Multiple Checkboxes (inline) -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="checkboxes">Your age</label>
-          <div class="col-md-4">
-            <label class="checkbox-inline" for="checkboxes-0">
-              <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
-              Under 18 (on July 10, 2019)
-            </label>
-            <label class="checkbox-inline" for="checkboxes-1">
-              <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
-              18 or over (on July 10, 2019)
-            </label>
-          </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
-          <input id="textinput" name="submitter_phone" type="text" placeholder="Your phone number" class="form-control input-md">
-          </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
-          <input id="textinput" name="submitter_zip" type="text" placeholder="Your zip code" class="form-control input-md">
-          </div>
-        </div>
-
-        <!-- Text input-->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
-          <input id="textinput" name="submitter_email" type="text" placeholder="Your email address" class="form-control input-md">
-          </div>
-        </div>
-
-        <!-- Button -->
-      <div class="form-group" style="padding-right: 15px;">
-          <label class="col-md-4 control-label" for="nominationSubmit"></label>
-          <div class="text-right">
-            <button id="nominationSubmit" name="nominationSubmit" class="btn" type="submit">Submit Nomination</button>
-          </div>
-        </div>
-
-        </fieldset>
-      </form>
     </div>
   </section>
 
@@ -233,8 +172,11 @@
     img.src = "maritime/" + nomination_name.charAt(i) + ".svg";
     img.className = "maritime";
 
-    var src = document.getElementById("nomination_name_maritime");
+    var src = document.getElementById("nomination_name");
     src.appendChild(img);
+
+    var heroName = document.getElementById("heroName");
+    heroName.innerHTML = nomination_name;
   }
   </script>
 

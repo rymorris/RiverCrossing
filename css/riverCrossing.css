@@ -962,11 +962,18 @@ a:focus, a:hover, a:active {
   width: 100%;
   display: inline-flex;
   /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 80%;
+  left: 10%;
+    right: 10%;
 }
 #nomination_name .maritime{
-padding: 10px;
+height: 12vw;
+margin: 3px;
+width: auto;
+border: 3px solid black;
+box-sizing: content-box;
 }
 
 #nomination_name_maritime div{
