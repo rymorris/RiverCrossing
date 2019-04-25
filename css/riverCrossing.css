@@ -310,7 +310,7 @@ header.masthead h2 {
 
 /* What Page */
 /* Center and set hero image */
-.heroContentWhat .imageBlock {
+.heroContentWhat .imageBlockHero {
   text-align: center;
   background-color: #f8c900;
   height: calc(100vh - 80px);
@@ -323,7 +323,7 @@ header.masthead h2 {
 
 /* When Page */
 /* Center and set hero image */
-.heroContentWhen .imageBlock {
+.heroContentWhen .imageBlockHero {
   text-align: center;
   background-color: #f8c900;
   height: calc(100vh - 80px);
@@ -352,7 +352,7 @@ header.masthead h2 {
 /* Nominate Page */
 @media (min-width: 990px) {
   /* Center and set hero image */
-  .heroContentNom .imageBlock {
+  .heroContentNom .imageblockHero {
     text-align: center;
     background-color: #f8ce08;
     height: calc(100vh - 80px);
@@ -363,7 +363,7 @@ header.masthead h2 {
     background-size: calc(100vw - 20%);
   }
 }
-.heroContentNom .imageBlock {
+.heroContentNom .imageblockHero {
   text-align: center;
   background-color: #f8ce08;
   height: calc(100vh - 80px);
