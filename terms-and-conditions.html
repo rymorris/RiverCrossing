@@ -41,24 +41,15 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <div id="navbarReplaceJs"></div>
       </div>
-
-
     </div>
   </nav>
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
-    <div class="heroContentWhen">
-      <div class="row" style="width: calc(100vw + 30px);">
-        <!-- Hero Image -->
-        <div class="imageBlockHero heroImgWhen">
-        </div>
-        <div class="col-md-12 col-lg-12 col-12 textOverlay">
-          <h2 class="col-md-6 col-lg-6 col-6">West Sacramento</h2>
-          <h2 class="col-md-3 col-lg-3 col-3"></h2>
-          <h2 class="col-md-6 col-lg-6 col-6">Sacramento</h2>
-       </div>
-      </div>
+    <div class="row" style="width: calc(100vw + 30px);">
+      <div class="imageBlockHero">
+        <img class="col-12" src="img/flags.png" alt="">
+     </div>
     </div>
   </header>
 
@@ -68,40 +59,21 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <p>
-        The competition to find two people whose names will become that of the public dock in Sacramento or West Sacramento <b>opened on 25th May 2019. Submissions will close on 10th July 2019.</b>
+        An installation of sculptural light boxes using graphics from international maritime signal flags will spell out the newly named public docks in Sacramento and West Sacramento. International maritime signal flags are a series of graphic representations used in nautical contexts. Each flag represents a letter of the alphabet and they are used to spell out messages. Individual flags also have specific and standard meanings. The letter ‘K’ for example, represents the message, ‘I want to communicate with you’.
       </p>
       <br>
-      <div class="text-center">
-        <a class="btn" href="#">
-          Nominate Someone
-        </a>
+      <p>
+        Type in your name here to see it in the international maritime signal flag alphabet.
+      </p>
+      <form class="form-horizontal" id="nominate">
+      <div class="form-group mt-5">
+        <label class="col-md-4 control-label" for="textinput"></label>
+        <div class="col-md-12">
+        <input id="textinput" name="nomination_name" oninput="inputToMaritime(this.value)" pattern="[a-z]" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
+        </div>
       </div>
-      <br><br>
-      <p>
-        During this time you can send us the name of the person you wish to nominate. As well as letting us know the name you propose, you should tell us why in up to 250 words.
-      </p>
-      <br>
-      <h2 class="text-center mb-0">
-        We want to build up a
-        <br>
-        biography of the people of
-        <br>
-        Sacramento and West Sacramento.
-        <br><br>
-      </h2>
-      <p>
-        After the call for nominations closes, the judges will select two names to be commemorated. One name will be chosen for the public dock in Sacramento and the other for the public dock in West Sacramento.
-      </p>
-      <br>
-      <p>
-        <b>The public docks will be newly named in the Fall of 2019.</b>
-      </p>
-      <br>
-      <div class="text-center">
-        <a class="btn" href="nominate">
-          Nominate Someone
-        </a>
-      </div>
+      <div class="" id="nomination_name_maritime"></div>
+    </form>
     </div>
   </section>
 
@@ -126,6 +98,28 @@
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
+  <script type="text/javascript">
+  function inputToMaritime(val) {
+    var val = (val.toLowerCase());
+    var word = document.createElement("div");
+    for (var i = 0; i < val.length; i++) {
+      console.log(val.charAt(i));
+
+      var img = document.createElement("img");
+      img.src = "maritime/" + val.charAt(i) + ".svg";
+      img.className = "maritime";
+
+      word.appendChild(img);
+    }
+    var src = document.getElementById("nomination_name_maritime");
+    if (document.getElementById("nomination_name_maritime").firstChild) {
+      var oldName = document.getElementById("nomination_name_maritime").firstChild;
+      src.removeChild(oldName);
+    }
+    src.appendChild(word);
+  // document.getElementById("demo").innerHTML = val;
+}
+  </script>
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>
