@@ -310,15 +310,35 @@ header.masthead h2 {
 
 /* What Page */
 /* Center and set hero image */
-.heroContentWhat .imageBlockHero {
-  text-align: center;
-  background-color: #f8c900;
-  height: calc(100vh - 80px);
-}
-.heroImgWhat {
-  background: white url(../img/what.png) no-repeat center;
-  width: calc(100vw + 30px);
-  background-size: calc(100vw - 30%);
+  .heroContentWhat .imageBlockHero {
+    text-align: center;
+    background-color: #f8c900;
+    height: calc(60vh - 80px);
+  }
+  .heroImgWhat {
+    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
+    height: calc(85vh);
+    width: 100%;
+    background-size: 60%;
+  }
+
+
+
+
+@media screen and (min-width: 990px) {
+  /* Center and set hero image */
+  .heroContentWhat .imageBlockHero {
+    text-align: center;
+    background-color: #f8c900;
+    height: calc(90vh - 80px);
+  }
+  .heroImgWhat {
+    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
+    height: calc(65vh);
+    width: 100%;
+    background-size: 60%;
+  }
+
 }
 
 /* When Page */
@@ -350,7 +370,20 @@ header.masthead h2 {
 }
 
 /* Nominate Page */
-@media (min-width: 990px) {
+
+.heroContentNom .imageblockHero {
+  text-align: center;
+  background-color: #f8ce08;
+  height: calc(100vh - 80px);
+}
+.heroImgNom {
+  background: #f8cf0a url(../img/nominate.png) no-repeat bottom center;
+  height: 70vh;
+  width: 100%;
+  background-size: contain;
+}
+
+@media screen and (min-width: 990px) {
   /* Center and set hero image */
   .heroContentNom .imageblockHero {
     text-align: center;
@@ -358,20 +391,11 @@ header.masthead h2 {
     height: calc(100vh - 80px);
   }
   .heroImgNom {
-    background: white url(../img/Nominate.png) no-repeat center bottom;
-    width: calc(100vw + 30px);
-    background-size: calc(100vw - 20%);
+    background: #f8cf0a url(../img/nominate.png) no-repeat bottom center;
+    height: calc(85vh);
+    width: 100%;
+    background-size: 60%;
   }
-}
-.heroContentNom .imageblockHero {
-  text-align: center;
-  background-color: #f8ce08;
-  height: calc(100vh - 80px);
-}
-.heroImgNom {
-  background: white url(../img/Nominate.png) no-repeat center;
-  width: calc(100vw + 30px);
-  background-size: calc(100vw - 20%);
 }
 
 .textOverlay h2 {
