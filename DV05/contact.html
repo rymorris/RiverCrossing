@@ -57,24 +57,15 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <div id="navbarReplaceJs"></div>
       </div>
-
-
     </div>
   </nav>
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
-    <div class="heroContentWhen">
-      <div class="row" style="width: calc(100vw + 30px);">
-        <!-- Hero Image -->
-        <div class="imageBlockHero heroImgWhen">
-        </div>
-        <div class="col-md-12 col-lg-12 col-12 textOverlay">
-          <h2 class="col-md-6 col-lg-6 col-6">West Sacramento</h2>
-          <h2 class="col-md-3 col-lg-3 col-3"></h2>
-          <h2 class="col-md-6 col-lg-6 col-6">Sacramento</h2>
-       </div>
-      </div>
+    <div class="row" style="width: calc(100vw + 30px);">
+      <div class="imageBlockHero">
+        <img class="col-12" src="img/contact.png" alt="">
+     </div>
     </div>
   </header>
 
@@ -83,46 +74,85 @@
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <p>
-        The competition to find two people whose names will become that of the public dock in Sacramento or West Sacramento <b>opened on 25th May 2019. Submissions will close on 10th July 2019.</b>
-      </p>
       <br>
-      <div class="text-center">
-        <a class="btn" href="#">
-          Nominate Someone
-        </a>
-      </div>
-      <br><br>
-      <p>
-        During this time you can send us the name of the person you wish to nominate. As well as letting us know the name you propose, you should tell us why in up to 250 words.
-      </p>
-      <br>
-      <h2 class="text-center mb-0">
-        We want to build up a
-        <br>
-        biography of the people of
-        <br>
-        Sacramento and West Sacramento.
-        <br><br>
-      </h2>
-      <p>
-        After the call for nominations closes, the judges will select two names to be commemorated. One name will be chosen for the public dock in Sacramento and the other for the public dock in West Sacramento.
-      </p>
-      <br>
-      <p>
-        <b>The public docks will be newly named in the Fall of 2019.</b>
-      </p>
-      <br>
-      <div class="text-center">
-        <a class="btn" href="nominate">
-          Nominate Someone
-        </a>
-      </div>
+      <form class="form-horizontal contactForm" id="contactForm">
+          <fieldset>
+
+          <!-- Form Name -->
+          <legend><h2 class="text-center mb-0">
+              Contact Us
+          </h2><br></legend>
+          <div class="col-md-12 p-0">
+            <p class="">
+              Need to ask a question or contact the press office about <b>RIVER CROSSING: I WANT TO COMMUNICATE WITH YOU? </b>
+            </p>
+          </div>
+
+
+          <div class="row">
+            <!-- Text input-->
+            <div class="form-group ">
+              <label class="col-md-4 control-label" for="textinput"></label>
+              <div class="col-md-12">
+              <input id="textinput" name="name" type="text" placeholder="Name" class="form-control input-md" required="" required>
+              </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput"></label>
+              <div class="col-md-12">
+              <input id="textinput" name="phone" type="text" placeholder="Phone" class="form-control input-md">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput"></label>
+                <div class="col-md-12">
+                <input id="textinput" name="email" type="text" placeholder="Email" class="form-control input-md" required="" required>
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="textinput"></label>
+                <div class="col-md-12">
+                <input id="textinput" name="textinput" type="text" placeholder="Confirm Email" class="form-control input-md" required="" required>
+                </div>
+              </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput"></label>
+            <div class="col-md-12">
+            <input id="textinput" name="message" type="text" placeholder="Message" class="form-control input-md formLong" required>
+
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div id="success"></div>
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="contactSubmit"></label>
+            <div class="text-right">
+              <button id="contactSubmit" name="contactSubmit" class="btn">Submit</button>
+            </div>
+          </div>
+
+          </fieldset>
+          </form>
+
     </div>
   </section>
 
   <!-- Footer -->
   <div id="footerReplaceJs"></div>
+
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-to-top d-lg-none position-fixed ">
@@ -140,8 +170,10 @@
   <!-- <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> -->
 
   <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+  <!-- <script src="js/jqBootstrapValidation.js"></script> -->
+
+  <script src="js/jquery.serialize-object.js" charset="utf-8"></script>
+  <script src="js/contact_ajax.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>

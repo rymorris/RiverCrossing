@@ -62,10 +62,15 @@
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
-    <div class="row" style="width: calc(100vw + 30px);">
-      <div class="imageBlockHero">
-        <img class="col-12" src="img/nominate.png" alt="">
-     </div>
+    <div class="heroContentNom">
+      <div class="row" style="width: calc(100vw + 30px);">
+        <!-- Hero Image -->
+        <div class="imageBlockHero heroImgNom">
+        </div>
+        <div class="col-md-12 col-lg-12 col-12 textOverlay">
+          <h2 class="text-uppercase"> It could be your beloved grandma, your best <br>school friend, a neighbor; it could even be you! </h2>
+       </div>
+      </div>
     </div>
   </header>
 
@@ -74,9 +79,6 @@
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <div id="nomination_name">
-
-      </div>
       <p>
         As well as letting us know the name you propose, you should tell us why in up to 250 words.
       </p>
@@ -99,7 +101,8 @@
         <b>Or in person to the boxes in the foyer of the City Hall in Sacramento or West Sacramento.</b>
       </p>
       <br><br>
-      <form class="form-horizontal" id="nominate">
+      <div class="" id="nomination_name_maritime"></div>
+      <form class="form-horizontal " id="nominate">
         <fieldset>
 
         <!-- Form Header -->
@@ -110,15 +113,15 @@
         <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
-          <input id="textinput" name="nomination_name" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
+          <div class="col-md-12 p-0">
+          <input id="textinput" name="nomination_name" oninput="inputToMaritime(this.value)" pattern="[a-z]" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
           </div>
         </div>
 
         <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
+          <div class="col-md-12 p-0">
           <input id="textinput" name="nomination_reason" type="text" placeholder="Tell us why in up to 250 words." class="form-control input-md formLong">
           </div>
         </div>
@@ -132,21 +135,24 @@
         <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
+          <div class="col-md-12 p-0">
           <input id="textinput" name="submitter_name" type="text" placeholder="Your name" class="form-control input-md" required="">
           </div>
         </div>
 
         <!-- Multiple Checkboxes (inline) -->
         <div class="form-group">
-          <label class="col-md-4 control-label" for="checkboxes">Your age</label>
-          <div class="col-md-4">
-            <label class="checkbox-inline" for="checkboxes-0">
-              <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+          <label class="col-12 control-label text-center d-block" for="checkboxes">Your age</label>
+          <br>
+          <div class="col-12 p-0">
+            <label class="checkbox-inline d-inline-block mr-5" for="checkboxes-0">
+              <input type="radio" name="submitter_age" id="checkboxes-0" value="under-18">
+              <span class="checkmark"></span>
               Under 18 (on July 10, 2019)
             </label>
-            <label class="checkbox-inline" for="checkboxes-1">
-              <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+            <label class="checkbox-inline d-inline-block" for="checkboxes-1">
+              <input type="radio" name="submitter_age" id="checkboxes-1" value="over-18">
+              <span class="checkmark"></span>
               18 or over (on July 10, 2019)
             </label>
           </div>
@@ -155,7 +161,7 @@
         <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
+          <div class="col-md-12 p-0">
           <input id="textinput" name="submitter_phone" type="text" placeholder="Your phone number" class="form-control input-md">
           </div>
         </div>
@@ -163,7 +169,7 @@
         <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
+          <div class="col-md-12 p-0">
           <input id="textinput" name="submitter_zip" type="text" placeholder="Your zip code" class="form-control input-md">
           </div>
         </div>
@@ -171,7 +177,7 @@
         <!-- Text input-->
         <div class="form-group">
           <label class="col-md-4 control-label" for="textinput"></label>
-          <div class="col-md-12">
+          <div class="col-md-12 p-0">
           <input id="textinput" name="submitter_email" type="text" placeholder="Your email address" class="form-control input-md">
           </div>
         </div>
@@ -191,7 +197,6 @@
 
   <!-- Footer -->
   <div id="footerReplaceJs"></div>
-
 
   <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
   <div class="scroll-to-top d-lg-none position-fixed ">
@@ -213,30 +218,34 @@
   <script src="js/jquery.serialize-object.js" charset="utf-8"></script>
   <script src="js/nominate_ajax.js"></script>
   <script src="js/contact_me.js"></script>
+  <script type="text/javascript">
+  function inputToMaritime(val) {
+    var val = (val.toLowerCase());
+    var word = document.createElement("div");
+    for (var i = 0; i < val.length; i++) {
+      if (val.charAt(i) !== ' ') {
+        console.log(val.charAt(i));
+
+        var img = document.createElement("img");
+        img.src = "maritime/" + val.charAt(i) + ".svg";
+        img.className = "maritime";
+
+        word.appendChild(img);
+      }
+    }
+    var src = document.getElementById("nomination_name_maritime");
+    if (document.getElementById("nomination_name_maritime").firstChild) {
+      var oldName = document.getElementById("nomination_name_maritime").firstChild;
+      src.removeChild(oldName);
+    }
+    src.appendChild(word);
+  // document.getElementById("demo").innerHTML = val;
+}
+  </script>
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>
-  <script type="text/javascript">
-  let paramsString = window.location.search;
-  let searchParams = new URLSearchParams(paramsString);
 
-  var nomination_name = searchParams.get("nomination_name");
-  var nomination_reason = searchParams.get("nomination_reason");
-  var submitter_name = searchParams.get("submitter_name");
-  console.log(nomination_name);
-  console.log(nomination_reason);
-
-  for (var i = 0; i < nomination_name.length; i++) {
-    console.log(nomination_name.charAt(i));
-
-    var img = document.createElement("img");
-    img.src = "maritime/" + nomination_name.charAt(i) + ".svg";
-    img.className = "maritime";
-
-    var src = document.getElementById("nomination_name_maritime");
-    src.appendChild(img);
-  }
-  </script>
 
 </body>
 

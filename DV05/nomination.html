@@ -24,6 +24,59 @@
 <meta name="msapplication-TileImage" content="favicon.ico/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
 
+<meta property="og:url" content="https://www.rymorris.github.io/RiverCrossing/flags" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="RiverCrossing" />
+<meta property="og:description" content="Spell out your name in maritime signal flags" />
+<meta property="og:image" content="https://rymorris.github.io/RiverCrossing/img/flags.png" />
+<meta property="fb:app_id" content="2036479499811893">
+
+<script>
+       window.fbAsyncInit = function () {
+           FB.init({
+               appId: '2036479499811893',
+               cookie: true,
+               xfbml: true,
+               version: 'v3.20'
+           });
+       };
+       (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+   </script>
+<script src="js/fbShare.js"></script>
+<script src="js/base64binary.js"></script>
+<style type="text/css">
+  .imageBlockHero {
+    position: relative;
+    text-align: center;
+  }
+  .overlay {
+    position: absolute;
+    top: 20vw;
+  }
+  .overlay .maritime {
+    width: 5vw;
+  }
+  #heroName {
+    bottom: 2vw;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 25vh;
+  }
+</style>
   <title>River Crossing | Joshua Sofaer</title>
 
   <!-- Bootstrap core CSS -->
@@ -41,7 +94,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onload="drawCanvas();">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top text-uppercase navbar-shrinkAlt" id="mainNav" style="background: #fff;">
@@ -62,10 +115,16 @@
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
+    <div class="heroContentNomination">
     <div class="row" style="width: calc(100vw + 30px);">
-      <div class="imageBlockHero">
-        <img class="col-12" src="img/contact.png" alt="">
-     </div>
+        <div class="imageBlockHero heroImgNomination">
+          <img class="col-12" src="img/flags.png" alt="">
+          <div id="nomination_name" class="overlay">
+          </div>
+          <h3 id="heroName"></h3>
+       </div>
+      </div>
+
     </div>
   </header>
 
@@ -74,96 +133,23 @@
   <!-- Portfolio Grid Section -->
   <section class="portfolio" id="portfolio">
     <div class="container">
-      <p>
-        As well as letting us know the name you propose, you should tell us why in up to 250 words.
-      </p>
-      <br>
-      <p>
-        It’s up to you who you choose.
-      </p>
-      <br>
-      <p>
-        <b>You can enter using the form below.</b>
-      </p>
-      <br>
-      <p>
-        <b>Or by mail to:</b><br>
-        River Crossing<br>
-        SMAC 915 I Street, 3rd Floor<br>
-        Sacramento, CA 95814,
-      </p>
-      <p>
-        <b>Or in person to the boxes in the foyer of the City Hall in Sacramento or West Sacramento.</b>
-      </p>
+
+
       <br><br>
-      <form class="form-horizontal contactForm" id="contactForm">
-          <fieldset>
 
-          <!-- Form Name -->
-          <legend><h2 class="text-center mb-0">
-              Contact Us
-          </h2><br></legend>
-          <p>
-            Need to ask a question or contact the press office about <b>RIVER CROSSING: I WANT TO COMMUNICATE WITH YOU? </b>
+        <div id="fb-root"></div>
+        	<div class="centre text-center">
+        		<h2>Thank you for your nomination.</h2>
+            <p>
+              Good luck! Those selected will be notified by August 31st, 2019.
           </p>
-
-          <div class="row">
-            <!-- Text input-->
-            <div class="form-group ">
-              <label class="col-md-4 control-label" for="textinput"></label>
-              <div class="col-md-12">
-              <input id="textinput" name="name" type="text" placeholder="Name" class="form-control input-md" required="" required>
+            <br>
+              <div class="text-center">
+                <a class="btn fbBtn" href="https://www.facebook.com/dialog/share?app_id=2036479499811893&display=popup&href=https%3A%2F%2Frymorris.github.io%2FRiverCrossing%2Fflags&redirect_uri=https%3A%2F%2Frymorris.github.io%2FRiverCrossing%2Fflags">
+                  Share RiverCrossing to Facebook
+                </a>
               </div>
-            </div>
-
-            <!-- Text input-->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="textinput"></label>
-              <div class="col-md-12">
-              <input id="textinput" name="phone" type="text" placeholder="Phone" class="form-control input-md">
-              </div>
-            </div>
-          </div>
-
-
-          <div class="row">
-            <!-- Text input-->
-            <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput"></label>
-                <div class="col-md-12">
-                <input id="textinput" name="email" type="text" placeholder="Email" class="form-control input-md" required="" required>
-                </div>
-              </div>
-
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="col-md-4 control-label" for="textinput"></label>
-                <div class="col-md-12">
-                <input id="textinput" name="textinput" type="text" placeholder="Confirm Email" class="form-control input-md" required="" required>
-                </div>
-              </div>
-          </div>
-
-          <!-- Text input-->
-          <div class="form-group">
-            <label class="col-md-4 control-label" for="textinput"></label>
-            <div class="col-md-12">
-            <input id="textinput" name="message" type="text" placeholder="Message" class="form-control input-md formLong" required>
-
-            </div>
-          </div>
-
-          <!-- Button -->
-          <div id="success"></div>
-          <div class="form-group">
-            <label class="col-md-4 control-label" for="contactSubmit"></label>
-            <div class="text-right">
-              <button id="contactSubmit" name="contactSubmit" class="btn">Submit</button>
-            </div>
-          </div>
-
-          </fieldset>
-          </form>
+        	</div>
 
     </div>
   </section>
@@ -188,14 +174,37 @@
   <!-- <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> -->
 
   <!-- Contact Form JavaScript -->
-  <!-- <script src="js/jqBootstrapValidation.js"></script> -->
-
+  <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/jquery.serialize-object.js" charset="utf-8"></script>
-  <script src="js/contact_ajax.js"></script>
+  <script src="js/nominate_ajax.js"></script>
+  <script src="js/contact_me.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>
+  <script type="text/javascript">
+  let paramsString = window.location.search;
+  let searchParams = new URLSearchParams(paramsString);
 
+  var nomination_name = searchParams.get("nomination_name");
+  var nomination_reason = searchParams.get("nomination_reason");
+  var submitter_name = searchParams.get("submitter_name");
+  console.log(nomination_name);
+  console.log(nomination_reason);
+
+  for (var i = 0; i < nomination_name.length; i++) {
+    console.log(nomination_name.charAt(i));
+
+    var img = document.createElement("img");
+    img.src = "maritime/" + nomination_name.charAt(i) + ".svg";
+    img.className = "maritime";
+
+    var src = document.getElementById("nomination_name");
+    src.appendChild(img);
+
+    var heroName = document.getElementById("heroName");
+    heroName.innerHTML = nomination_name;
+  }
+  </script>
 
 </body>
 

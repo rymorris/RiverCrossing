@@ -216,7 +216,6 @@ section h2 {
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 60px;
-    padding-top: 0;
     position: sticky;
     border-bottom: 1px solid #e6e6e6;
   }
@@ -314,11 +313,11 @@ header.masthead h2 {
   .heroContentWhat .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: calc(100vh - 80px);
+    height: 40vh;
   }
   .heroImgWhat {
     background: #f8cf0a url(../img/what.png) no-repeat bottom center;
-    height: calc(85vh);
+    height: calc(40vh);
     width: 100%;
     background-size: 60%;
   }
@@ -347,11 +346,11 @@ header.masthead h2 {
 /* Center and set hero image */
   .heroContentWhy .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
-    height: calc(100vh - 80px);
+    background-color: #0066b4;
+    height: calc(50vh - 80px);
   }
   .heroImgWhy {
-    background: #f8cf0a url(../img/what.png) no-repeat middle center;
+    background: #0066b4 no-repeat middle center;
     height: calc(85vh);
     width: 100%;
     background-size: cover;
@@ -364,11 +363,11 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentWhy .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
+    background-color: #0066b4;
     height: calc(100vh - 80px);
   }
   .heroImgWhy {
-    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
+    background: #0066b4 no-repeat bottom center;
     height: calc(85vh);
     width: 100%;
     background-size: 60%;
@@ -380,11 +379,11 @@ header.masthead h2 {
 /* Center and set hero image */
   .heroContentFlags .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
-    height: calc(90vh - 80px);
+    background-color: #0066b4;
+    height: calc(50vh - 80px);
   }
   .heroImgFlags {
-    background: #f8cf0a url(../img/what.png) no-repeat middle center;
+    background: #0066b4 url(../img/flags-old.png) no-repeat middle center;
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -397,11 +396,11 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentFlags .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
-    height: calc(90vh - 80px);
+    background-color: #0066b4;
+    height: calc(100vh - 80px);
   }
   .heroImgFlags {
-    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
+    background: #0066b4  no-repeat bottom center;
     height: 95vh;
     width: 100%;
     background-size: 60%;
@@ -413,11 +412,11 @@ header.masthead h2 {
 /* Center and set hero image */
   .heroContentNomination .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
-    height: calc(100vh - 80px);
+    background-color: #0773bb;
+    height: calc(50vh - 80px);
   }
   .heroImgNomination {
-    background: #f8cf0a url(../img/what.png) no-repeat middle center;
+    background: #0773bb no-repeat middle center;
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -435,11 +434,11 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentNomination .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
+    background-color: #0773bb;
     height: calc(100vh - 80px);
   }
   .heroImgNomination {
-    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
+    background: #0773bb no-repeat bottom center;
     height: 95vh;
     width: 100%;
     background-size: 60%;
@@ -452,7 +451,7 @@ header.masthead h2 {
   .heroContentWho .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: calc(100vh - 80px);
+    height: calc(50vh - 80px);
   }
   .heroImgWho {
     background: #f8cf0a url(../img/what.png) no-repeat bottom center;
@@ -485,19 +484,35 @@ header.masthead h2 {
 .heroContentWhen .imageBlockHero {
   text-align: center;
   background-color: #f8c900;
-  height: calc(100vh - 80px);
+  height: calc(50vh - 80px);
 }
 .heroImgWhen {
-  background: white url(../img/when.png) no-repeat center;
+  background: #f8c900 url(../img/when.png) no-repeat center;
   width: calc(100vw + 30px);
   background-size: 100vw;
 }
+
+@media screen and (min-width: 990px) {
+  /* Center and set hero image */
+  .heroContentWhen .imageBlockHero {
+    text-align: center;
+    background-color: #f8c900;
+    height: calc(90vh - 80px);
+  }
+  .heroImgWhen {
+    background: #f8c900 url(../img/when.png) no-repeat center;
+    width: calc(100vw + 30px);
+    background-size: 100vw;
+  }
+}
+
 /* Align West Sacramento and Sacramento text */
 .heroContentWhen .textOverlay {
   display: inline-flex;
   justify-content: space-evenly;
   color: #ca191a;
   line-height: 2em;
+  overflow: hidden;
 }
 .heroContentWhen .textOverlay h2:nth-child(1) {
   background-color: #f8c900;
@@ -571,7 +586,7 @@ header.masthead h2 {
   /* Contact Page */
   .contactForm .row {
     flex-flow: row;
-    max-width: 800px;
+    max-width: 840px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -579,7 +594,7 @@ header.masthead h2 {
     flex-flow: column;
   }
 /* @media screen and (max-width: 576px) { */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 990px) {
   .indexHeroRight {
     padding: 70px 0 0 45px;
     height: 50vh;
@@ -618,7 +633,7 @@ header.masthead h2 {
 }
 .portfolio p {
   font-size: 25px;
-  max-width: 800px;
+  max-width: 780px;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -705,7 +720,7 @@ header.masthead h2 {
 }
 .indexContentOne .row {
   display: inline-block;
-  min-height: 500px;
+  min-height: 580px;
 }
 
 .indexContentOne .imageBlock{
@@ -765,10 +780,13 @@ header.masthead h2 {
       right: 20px;
     }
   .indexContentOne .textBlock p {
+    text-align: left;
     position: absolute;
+    left: 20%;
     right: 50px;
+    bottom: 70px;
     top: 50px;
-    max-width: 500px;
+    max-height: 520px;
   }
 }
 
@@ -925,9 +943,11 @@ header.masthead h2 {
   }
   .indexContentThree .textBlock p {
     position: absolute;
+    left: 20%;
     right: 50px;
+    bottom: 70px;
     top: 50px;
-    max-width: 500px;
+    max-height: 520px;
   }
 }
 
@@ -1130,11 +1150,15 @@ a:focus, a:hover, a:active {
     right: 10%;
 }
 #nomination_name .maritime{
-height: 12vw;
-margin: 3px;
+height: 8vw;
+padding: 5px;
 width: auto;
 border: 3px solid black;
 box-sizing: content-box;
+}
+
+#nomination_name_maritime {
+  margin-bottom: 50px;
 }
 
 #nomination_name_maritime div{
@@ -1145,7 +1169,8 @@ box-sizing: content-box;
   flex-wrap: wrap;
 }
 #nomination_name_maritime div .maritime{
-padding: 10px;
+padding: 5px;
+height: 8vw;
 }
 
 
