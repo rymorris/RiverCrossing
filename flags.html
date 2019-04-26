@@ -24,6 +24,12 @@
   <meta name="msapplication-TileImage" content="favicon.ico/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
+  <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Your Website Title" />
+  <meta property="og:description"   content="Your description" />
+  <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+
   <title>River Crossing | Joshua Sofaer</title>
 
   <!-- Bootstrap core CSS -->
@@ -62,11 +68,14 @@
 
   <!-- Header -->
   <header class="masthead indexHero bg-primary text-white" style="overflow: hidden;">
-    <div class="row" style="width: calc(100vw + 30px);">
-      <div class="imageBlockHero">
-        <img class="col-12" src="img/flags.png" alt="">
-     </div>
+    <div class="heroContentFlags">
+      <div class="row" style="height: 90vh; width: calc(100vw + 30px);">
+        <div class="imageBlockHero heroImgFlags">
+          <img class="col-12" src="img/flags.png" style="width: calc(100vw + 30px);" alt="">
+       </div>
+      </div>
     </div>
+
   </header>
 
 
@@ -90,14 +99,23 @@
       <form class="form-horizontal" id="nominate">
       <div class="form-group mt-5">
         <label class="col-md-4 control-label" for="textinput"></label>
-        <div class="col-md-12">
-        <input id="textinput" name="nomination_name" oninput="inputToMaritime(this.value)" pattern="[a-z]" type="text" placeholder="What name do you want to nominate?" class="form-control input-md" required="">
+        <div class="col-md-12 p-0">
+        <input id="textinput" name="nomination_name" oninput="inputToMaritime(this.value)" pattern="[a-z]" type="text" placeholder="Your Name" class="form-control input-md" required="">
         </div>
       </div>
       <div class="" id="nomination_name_maritime"></div>
     </form>
+
+
     </div>
   </section>
+
+  <div class="text-center">
+    <a class="btn fbBtn" href="https://www.facebook.com/dialog/share?app_id=2036479499811893&display=popup&href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F&redirect_uri=https%3A%2F%2Fdevelopers.facebook.com%2Ftools%2Fexplorer">
+      Share to Facebook
+    </a>
+  </div>
+
 
   <!-- Footer -->
   <div id="footerReplaceJs"></div>
