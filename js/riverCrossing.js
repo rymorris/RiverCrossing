@@ -90,23 +90,24 @@
 
 })(jQuery); // End of use strict
 
-function activeNavState() {
-  var fragmentElement = document.getElementsByClassName('nav-link');
+$(document).ready(function() {
+  setTimeout(function() {
+    var fragmentElement = document.getElementsByClassName('nav-link');
 
-  for (var i = 0; i < fragmentElement.length; i++) {
-    var fragment = fragmentElement[i].getAttribute('href');
+    for (var i = 0; i < fragmentElement.length; i++) {
+      var fragment = fragmentElement[i].getAttribute('href');
 
-    var url = window.location.href.split('/');
-    var last_item = '/' + url[url.length-1];
-    last_item = last_item.replace(/(\?|\#).*/, '');
-    last_item = last_item.replace('/', '');
-    last_item = last_item.replace('.html', '');
-    console.log(last_item);
-    console.log(fragment);
-    if (last_item == fragment) {
-      fragmentElement[i].classList.add('active');
+      var url = window.location.href.split('/');
+      var last_item = '/' + url[url.length-1];
+      last_item = last_item.replace(/(\?|\#).*/, '');
+      last_item = last_item.replace('/', '');
+      last_item = last_item.replace('.html', '');
+      console.log(last_item);
+      console.log(fragment);
+      if (last_item == fragment) {
+        fragmentElement[i].classList.add('active');
+      }
+
     }
-
-  }
-}
-window.onload=activeNavState;
+  }, 400);
+});

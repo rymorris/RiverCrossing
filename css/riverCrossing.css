@@ -214,12 +214,12 @@ section h2 {
     border-bottom: 1px solid #e6e6e6;
   }
   #mainNav.navbar-shrinkAlt {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 60px;
-    padding-top: 0;
+    padding: 0;
     /* position: sticky; */
     border-bottom: 1px solid #e6e6e6;
   }
@@ -1026,7 +1026,7 @@ header.masthead h2 {
 
 .indexContentThree .row {
   display: inline-block;
-  min-height: 500px;
+  min-height: 700px;
   margin-top: 100px;
 }
 
@@ -1297,10 +1297,13 @@ a:focus, a:hover, a:active {
   display: inline-flex;
   /* Then we define how is distributed the remaining space */
   justify-content: space-between;
-  flex-wrap: wrap;
   max-width: 80%;
   left: 10%;
     right: 10%;
+}
+#nomination_name div {
+  overflow-x: scroll !important;
+  white-space: nowrap;
 }
 #nomination_name .maritime{
 height: 8vw;
@@ -1321,7 +1324,9 @@ box-sizing: content-box;
   display: inline-flex;
   /* Then we define how is distributed the remaining space */
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 #nomination_name_maritime div .maritime{
 padding: 5px;
