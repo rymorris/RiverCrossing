@@ -318,7 +318,7 @@ header.masthead h2 {
   .heroContentWhat .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: 40vh;
+    height: calc(70vw - 80px);
   }
   .heroImgWhat {
     background: #f8cf0a url(../img/what.png) no-repeat bottom center;
@@ -607,7 +607,7 @@ header.masthead h2 {
 .heroContentWhen .imageBlockHero {
   text-align: center;
   background-color: #f8c900;
-  height: calc(50vh - 80px);
+  height: calc(70vw - 80px);
 }
 .heroImgWhen {
   background: #f8c900 url(../img/when.png) no-repeat center;
@@ -1081,6 +1081,11 @@ header.masthead h2 {
     width: 90%;
     text-align: left;
   }
+  .indexContentThree .imageBlock img{
+    width: 70% !important;
+    max-width: 400px;
+    padding: 20px;
+  }
   .indexContentThree .textBlock .btn {
     margin-top: 30px;
   }
@@ -1190,6 +1195,12 @@ form .row:first-child .floating-label-form-group {
   background-color: #ca191a;
   text-decoration: none;
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer h4 {
+    font-size: 30px;
+  }
 }
 
 .contact-button {
