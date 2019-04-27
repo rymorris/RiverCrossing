@@ -10,7 +10,8 @@
     var url = window.location.href.split('/');
     var last_item = '/' + url[url.length-1];
     last_item = last_item.replace(/(\?|\#).*/, '');
-
+    console.log(last_item);
+    console.log(fragment);
     if (last_item == fragment) {
       fragmentElement[i].classList.add('active');
     }
