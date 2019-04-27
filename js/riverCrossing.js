@@ -2,6 +2,21 @@
   $("#navbarReplaceJs").load("template/navbar.html");
 
   $("#footerReplaceJs").load("template/footer.html");
+
+  var fragmentElement = getElementsByClassName('nav-link');
+  for (var i = 0; i < fragmentElement.length; i++) {
+    var fragment = fragmentElement[i].getAttribute(href);
+
+    var url = window.location.href.split('/');
+    var last_item = '/' + url[url.length-1];
+    last_item = last_item.replace(/(\?|\#).*/, '');
+
+    if (last_item == fragment) {
+      fragmentElement[i].classList.add('active');
+    }
+
+  }
+
   // mobile menu slide from the left
   $('[data-toggle="slide-collapse"]').on('click', function() {
       $navMenuCont = $($(this).data('target'));
@@ -79,7 +94,7 @@
     $("body").on("input propertychange", ".floating-label-form-group", function(e) {
       $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
     }).on("focus", ".floating-label-form-group", function() {
-      $(this).addClass("floating-label-form-group-with-focus");
+      $(this).class("floating-label-form-group-with-focus");
     }).on("blur", ".floating-label-form-group", function() {
       $(this).removeClass("floating-label-form-group-with-focus");
     });

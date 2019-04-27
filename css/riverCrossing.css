@@ -235,6 +235,7 @@ section h2 {
 
 header.masthead {
   padding: 0;
+  margin-top: 60px;
 }
 
 header.masthead h1 {
@@ -331,7 +332,7 @@ header.masthead h2 {
   .heroContentWhat .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: calc(100vh - 80px);
+    height: calc(100vh);
   }
   .heroImgWhat {
     background: #f8cf0a url(../img/what.png) no-repeat bottom center;
@@ -348,15 +349,19 @@ header.masthead h2 {
   .heroContentWhy .imageBlockHero {
     text-align: center;
     background-color: #0066b4;
-    height: calc(50vh - 80px);
+    height: calc(70vw - 80px);
   }
   .heroImgWhy {
-    background: #0066b4 no-repeat middle center;
+    background: #0066b4 url(../img/why.png) no-repeat bottom center;
     height: calc(85vh);
     width: 100%;
-    background-size: cover;
+    background-size: 100%;
+    background-position: 0 50%;
   }
 
+  .heroImgWhy img {
+    opacity: 0;
+  }
 
 
 
@@ -365,13 +370,14 @@ header.masthead h2 {
   .heroContentWhy .imageBlockHero {
     text-align: center;
     background-color: #0066b4;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
   }
   .heroImgWhy {
-    background: #0066b4 no-repeat bottom center;
-    height: calc(85vh);
+    background: #0066b4 url(../img/why.png) no-repeat bottom center;
+    height: calc(90vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 110%;
+    background-position: center 50% ;
   }
 
 }
@@ -380,16 +386,20 @@ header.masthead h2 {
 /* Center and set hero image */
   .heroContentFlags .imageBlockHero {
     text-align: center;
-    background-color: #0066b4;
-    height: calc(50vh - 80px);
+    background-color: #fff;
+    height: calc(70vw - 80px);
   }
   .heroImgFlags {
-    background: #0066b4 url(../img/flags-old.png) no-repeat middle center;
-    height: 90vh;
+    background: #fff url(../img/flags-old.png) no-repeat bottom center;
+    height: calc(85vh);
     width: 100%;
-    background-size: cover;
+    background-size: 100%;
+    background-position: 0 50%;
   }
 
+  .heroImgFlags img {
+    opacity: 0;
+  }
 
 
 
@@ -397,37 +407,38 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentFlags .imageBlockHero {
     text-align: center;
-    background-color: #0066b4;
-    height: calc(100vh - 80px);
+    background-color: #fff;
+    height: calc(100vh - 60px);
   }
   .heroImgFlags {
-    background: #0066b4  no-repeat bottom center;
-    height: 95vh;
+    background: #fff url(../img/flags-old.png) no-repeat bottom center;
+    height: calc(90vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 110%;
+    background-position: center 50% ;
   }
 
 }
 
-/* nomination Page */
+
+/* Nomination Page */
 /* Center and set hero image */
   .heroContentNomination .imageBlockHero {
     text-align: center;
-    background-color: #0773bb;
-    height: calc(50vh - 80px);
+    background-color: #fff;
+    height: calc(70vw - 80px);
   }
   .heroImgNomination {
-    background: #0773bb no-repeat middle center;
-    height: 90vh;
+    background: #fff url(../img/flags.png) no-repeat bottom center;
+    height: calc(85vh);
     width: 100%;
-    background-size: cover;
-  }
-  .heroImgNomination img {
-    bottom: 50px;
-    left: 0;
-    right: 0;
+    background-size: 100%;
+    background-position: 0 50%;
   }
 
+  .heroImgNomination > img {
+    opacity: 0;
+  }
 
 
 
@@ -435,14 +446,15 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentNomination .imageBlockHero {
     text-align: center;
-    background-color: #0773bb;
-    height: calc(100vh - 80px);
+    background-color: #fff;
+    height: calc(100vh - 60px);
   }
   .heroImgNomination {
-    background: #0773bb no-repeat bottom center;
-    height: 95vh;
+    background: #fff url(../img/flags.png) no-repeat bottom center;
+    height: calc(90vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 110%;
+    background-position: center 50% ;
   }
 
 }
@@ -451,31 +463,100 @@ header.masthead h2 {
 /* Center and set hero image */
   .heroContentWho .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
-    height: calc(50vh - 80px);
+    background-color: #0272b9;
+    height: calc(70vw - 80px);
   }
   .heroImgWho {
-    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
+    background: #0272b9 url(../img/who.png) no-repeat bottom center;
     height: calc(85vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 100%;
+    background-position: center 50%;
   }
 
+  .heroImgWho > img {
+    opacity: 0;
+  }
 
+  .bioImageContainerCenter {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 780px;
+  }
+  .bioImageContainer {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .bio h2 {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  .bio p {
+  text-align: left !important;
+  line-height: 130%;
+  font-size: 20px;
+  margin-bottom: 30px;
+  }
+  @media screen and (min-width: 990px) {
+    .bioImage {
+      width: 30vw;
+      height: 30vw;
+      border: 3px solid black;
+    }
+    .bio.left {
+      margin-right: 20px;
+    }
+    .bio.right {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 990px) {
+    .bioImage {
+      width: 40vw;
+      height: 40vw;
+      border: 3px solid black;
+    }
+    .bio.left {
+      margin-right: 20px;
+    }
+    .bio.right {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bioImageContainer {
+      display: inline-block;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .bioImage {
+      width: 90vw%;
+      height: 90vw;
+      border: 3px solid black;
+    }
+    .bio.left {
+      margin: 0;
+    }
+    .bio.right {
+      margin: 0;
+    }
+  }
 
 
 @media screen and (min-width: 990px) {
   /* Center and set hero image */
   .heroContentWho .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
-    height: calc(100vh - 80px);
+    background-color: #0272b9;
+    height: calc(100vh - 60px);
   }
   .heroImgWho {
-    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
-    height: calc(65vh);
+    background: #0272b9 url(../img/who.png) no-repeat bottom center;
+    height: calc(90vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 100%;
+    background-position: center 50% ;
   }
 
 }
@@ -635,6 +716,7 @@ header.masthead h2 {
 .portfolio p {
   font-size: 25px;
   max-width: 780px;
+  font-weight: lighter;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -1152,10 +1234,12 @@ a:focus, a:hover, a:active {
 }
 #nomination_name .maritime{
 height: 8vw;
-padding: 5px;
+margin: 5px;
 width: auto;
 border: 3px solid black;
 box-sizing: content-box;
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
 }
 
 #nomination_name_maritime {
