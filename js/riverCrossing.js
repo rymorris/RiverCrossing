@@ -3,7 +3,7 @@
 
   $("#footerReplaceJs").load("template/footer.html");
 
-  var fragmentElement = getElementsByClassName('nav-link');
+  var fragmentElement = document.getElementsByClassName('nav-link');
   for (var i = 0; i < fragmentElement.length; i++) {
     var fragment = fragmentElement[i].getAttribute(href);
 
