@@ -136,10 +136,13 @@ section h2 {
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
   color: #000;
+  padding: 16px !important;
+  margin-top: 10px;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #ca191a;
+  color: #ffffff;
+  background-color: #0272b9;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -211,12 +214,13 @@ section h2 {
     border-bottom: 1px solid #e6e6e6;
   }
   #mainNav.navbar-shrinkAlt {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 60px;
-    position: sticky;
+    padding: 0;
+    /* position: sticky; */
     border-bottom: 1px solid #e6e6e6;
   }
   #mainNav.navbar-shrink .navbar-brand .logo {
@@ -234,6 +238,7 @@ section h2 {
 
 header.masthead {
   padding: 0;
+  margin-top: 60px;
 }
 
 header.masthead h1 {
@@ -313,7 +318,7 @@ header.masthead h2 {
   .heroContentWhat .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: 40vh;
+    height: calc(70vw - 80px);
   }
   .heroImgWhat {
     background: #f8cf0a url(../img/what.png) no-repeat bottom center;
@@ -330,7 +335,7 @@ header.masthead h2 {
   .heroContentWhat .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
   }
   .heroImgWhat {
     background: #f8cf0a url(../img/what.png) no-repeat bottom center;
@@ -347,15 +352,19 @@ header.masthead h2 {
   .heroContentWhy .imageBlockHero {
     text-align: center;
     background-color: #0066b4;
-    height: calc(50vh - 80px);
+    height: calc(70vw - 80px);
   }
   .heroImgWhy {
-    background: #0066b4 no-repeat middle center;
+    background: #0066b4 url(../img/why.png) no-repeat bottom center;
     height: calc(85vh);
     width: 100%;
-    background-size: cover;
+    background-size: 100%;
+    background-position: 0 50%;
   }
 
+  .heroImgWhy img {
+    opacity: 0;
+  }
 
 
 
@@ -364,13 +373,14 @@ header.masthead h2 {
   .heroContentWhy .imageBlockHero {
     text-align: center;
     background-color: #0066b4;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
   }
   .heroImgWhy {
-    background: #0066b4 no-repeat bottom center;
-    height: calc(85vh);
+    background: #0066b4 url(../img/why.png) no-repeat bottom center;
+    height: calc(90vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 110%;
+    background-position: center 50% ;
   }
 
 }
@@ -379,16 +389,20 @@ header.masthead h2 {
 /* Center and set hero image */
   .heroContentFlags .imageBlockHero {
     text-align: center;
-    background-color: #0066b4;
-    height: calc(50vh - 80px);
+    background-color: #fff;
+    height: calc(70vw - 80px);
   }
   .heroImgFlags {
-    background: #0066b4 url(../img/flags-old.png) no-repeat middle center;
-    height: 90vh;
+    background: #fff url(../img/flags-old.png) no-repeat bottom center;
+    height: calc(85vh);
     width: 100%;
-    background-size: cover;
+    background-size: 100%;
+    background-position: 0 50%;
   }
 
+  .heroImgFlags img {
+    opacity: 0;
+  }
 
 
 
@@ -396,37 +410,38 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentFlags .imageBlockHero {
     text-align: center;
-    background-color: #0066b4;
-    height: calc(100vh - 80px);
+    background-color: #fff;
+    height: calc(100vh - 60px);
   }
   .heroImgFlags {
-    background: #0066b4  no-repeat bottom center;
-    height: 95vh;
+    background: #fff url(../img/flags-old.png) no-repeat bottom center;
+    height: calc(90vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 110%;
+    background-position: center 50% ;
   }
 
 }
 
-/* nomination Page */
+
+/* Nomination Page */
 /* Center and set hero image */
   .heroContentNomination .imageBlockHero {
     text-align: center;
-    background-color: #0773bb;
-    height: calc(50vh - 80px);
+    background-color: #fff;
+    height: calc(70vw - 80px);
   }
   .heroImgNomination {
-    background: #0773bb no-repeat middle center;
-    height: 90vh;
+    background: #fff url(../img/flags.png) no-repeat bottom center;
+    height: calc(85vh);
     width: 100%;
-    background-size: cover;
-  }
-  .heroImgNomination img {
-    bottom: 50px;
-    left: 0;
-    right: 0;
+    background-size: 100%;
+    background-position: 0 50%;
   }
 
+  .heroImgNomination > img {
+    opacity: 0;
+  }
 
 
 
@@ -434,14 +449,15 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentNomination .imageBlockHero {
     text-align: center;
-    background-color: #0773bb;
-    height: calc(100vh - 80px);
+    background-color: #fff;
+    height: calc(100vh - 60px);
   }
   .heroImgNomination {
-    background: #0773bb no-repeat bottom center;
-    height: 95vh;
+    background: #fff url(../img/flags.png) no-repeat bottom center;
+    height: calc(90vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 110%;
+    background-position: center 50% ;
   }
 
 }
@@ -450,41 +466,148 @@ header.masthead h2 {
 /* Center and set hero image */
   .heroContentWho .imageBlockHero {
     text-align: center;
-    background-color: #f8c900;
-    height: calc(50vh - 80px);
+    background-color: #0272b9;
+    height: calc(70vw - 80px);
   }
   .heroImgWho {
-    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
+    background: #0272b9 url(../img/who.png) no-repeat bottom center;
     height: calc(85vh);
     width: 100%;
-    background-size: 60%;
+    background-size: 100%;
+    background-position: center 50%;
+  }
+
+  .heroImgWho > img {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 990px) {
+    /* Center and set hero image */
+    .heroContentWho .imageBlockHero {
+      text-align: center;
+      background-color: #0272b9;
+      height: calc(100vh - 60px);
+    }
+    .heroImgWho {
+      background: #0272b9 url(../img/who.png) no-repeat bottom center;
+      height: calc(90vh);
+      width: 100%;
+      background-size: 100%;
+      background-position: center 50% ;
+    }
+
   }
 
 
-
-
-@media screen and (min-width: 990px) {
-  /* Center and set hero image */
-  .heroContentWho .imageBlockHero {
-    text-align: center;
-    background-color: #f8c900;
-    height: calc(100vh - 80px);
+  .bioImageContainerCenter {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 780px;
   }
-  .heroImgWho {
-    background: #f8cf0a url(../img/what.png) no-repeat bottom center;
-    height: calc(65vh);
+  .bioImageContainer {
+    display: inline-flex;
+    justify-content: space-between;
     width: 100%;
-    background-size: 60%;
+  }
+  .bio h2 {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+  .bio p {
+  text-align: left !important;
+  line-height: 130%;
+  font-size: 20px;
+  margin-bottom: 30px;
+  }
+  @media screen and (min-width: 990px) {
+    .bioImage {
+      width: 30vw;
+      height: 30vw;
+      border: 3px solid black;
+    }
+    .bio.left {
+      margin-right: 20px;
+    }
+    .bio.right {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 990px) {
+    .bioImage {
+      width: 40vw;
+      height: 40vw;
+      border: 3px solid black;
+    }
+    .bio.left {
+      margin-right: 20px;
+    }
+    .bio.right {
+      margin-left: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bioImageContainer {
+      display: inline-block;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .bioImage {
+      width: 90vw%;
+      height: 90vw;
+      border: 3px solid black;
+    }
+    .bio.left {
+      margin: 0;
+    }
+    .bio.right {
+      margin: 0;
+    }
   }
 
-}
+
+  /* Where Page */
+  /* Center and set hero image */
+    .heroContentWhere .imageBlockHero {
+      text-align: center;
+      background-color: #0272b9;
+      height: calc(70vw - 80px);
+    }
+    .heroImgWhere {
+      background: #0272b9 url(../img/where.png) no-repeat bottom center;
+      height: calc(85vh);
+      width: 100%;
+      background-size: 100%;
+      background-position: center 50%;
+    }
+
+    .heroImgWhere > img {
+      opacity: 0;
+    }
+
+    @media screen and (min-width: 990px) {
+      /* Center and set hero image */
+      .heroContentWhere .imageBlockHero {
+        text-align: center;
+        background-color: #0272b9;
+        height: calc(100vh - 60px);
+      }
+      .heroImgWhere {
+        background: #0272b9 url(../img/where.png) no-repeat bottom center;
+        height: calc(90vh);
+        width: 100%;
+        background-size: cover;
+        background-position: center 50% ;
+      }
+
+    }
+
 
 /* When Page */
 /* Center and set hero image */
 .heroContentWhen .imageBlockHero {
   text-align: center;
   background-color: #f8c900;
-  height: calc(50vh - 80px);
+  height: calc(70vw - 80px);
 }
 .heroImgWhen {
   background: #f8c900 url(../img/when.png) no-repeat center;
@@ -497,7 +620,7 @@ header.masthead h2 {
   .heroContentWhen .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: calc(90vh - 80px);
+    height: calc(100vh - 60px);
   }
   .heroImgWhen {
     background: #f8c900 url(../img/when.png) no-repeat center;
@@ -523,16 +646,18 @@ header.masthead h2 {
   text-align: left;
 }
 
+
+
 /* Nominate Page */
 
 .heroContentNom .imageblockHero {
   text-align: center;
-  background-color: #f8ce08;
+  background-color: #cc2029;
   height: calc(100vh - 80px);
   position: relative;
 }
 .heroImgNom {
-  background: #f8cf0a url(../img/nominate.png) no-repeat bottom center;
+  background: #cc2029 url(../img/nominate.png) no-repeat bottom center;
   height: 65vh;
   width: 100%;
   background-size: contain;
@@ -542,17 +667,21 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentNom .imageblockHero {
     text-align: center;
-    background-color: #f8ce08;
+    background-color: #cc2029;
     height: calc(100vh - 80px);
   }
   .heroImgNom {
-    background: #f8cf0a url(../img/nominate.png) no-repeat bottom center;
-    height: calc(90vh);
+    background: #cc2029 url(../img/nominate.png) no-repeat bottom center;
+    height: calc(100vh - 60px);
     width: 100%;
-    background-size: 60%;
+    background-size: cover;
   }
 }
 
+.heroContentNom .textOverlay {
+  top: 100px !important;
+  color: #ffffff;
+}
 .textOverlay h2 {
   width: 80%;
   margin: 0 auto;
@@ -634,6 +763,7 @@ header.masthead h2 {
 .portfolio p {
   font-size: 25px;
   max-width: 780px;
+  font-weight: lighter;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -715,7 +845,7 @@ header.masthead h2 {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .imageBlock img {
-    padding-top: 20% !important;
+    padding-top: 15% !important;
   }
 }
 .indexContentOne .row {
@@ -725,13 +855,20 @@ header.masthead h2 {
 
 .indexContentOne .imageBlock{
   float: right;
-  background-color: #f8c900;
+  background-color: #f7cd30;
+  position: relative;
+  min-height: 580px;
 }
 
 .indexContentOne .imageBlock img{
-  width: 60%;
-  max-width: 350px;
-  padding: 20px;
+  margin: auto !important;
+  padding: 0 !important;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .indexContentOne .textBlock{
@@ -744,6 +881,7 @@ header.masthead h2 {
 .indexContentOne .textBlock .btn {
   margin-left: 25%;
   margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 .indexContentOne .textBlock p {
@@ -757,16 +895,19 @@ header.masthead h2 {
   .indexContentOne .imageBlock{
     text-align: center;
   }
-
+  .indexContentOne .imageBlock img{
+    width: 75%;
+    max-width: 400px;
+  }
   .indexContentOne .textBlock p {
     margin: 35px auto 35px auto;
     width: 90%;
   }
   .indexContentOne .textBlock p {
-    text-align: center;
+    text-align: left;
   }
   .indexContentOne .textBlock .btn {
-    text-align: center;
+    text-align: center !important;
     margin-left: 0;
   }
 }
@@ -798,7 +939,7 @@ header.masthead h2 {
 
 .indexContentTwo .imageBlock {
   float: left;
-  background-color: #f8c900;
+  background-color: #f7cd30;
   overflow: hidden;
   text-align: center;
   min-height: 400px;
@@ -807,10 +948,14 @@ header.masthead h2 {
 }
 
 .indexContentTwo .imageBlock img{
-  width: 130%;
-  max-width: 700px;
-  padding: 0;
-  transform: scale(1.33);
+  margin: auto !important;
+  padding: 0 !important;
+  width: 120%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .indexContentTwo .textBlock{
@@ -822,6 +967,7 @@ header.masthead h2 {
 .indexContentTwo .textBlock .btn {
   margin-left: 25%;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .indexContentTwo .textBlock p {
@@ -833,8 +979,11 @@ header.masthead h2 {
 }
 
 @media screen and (max-width: 990px) {
+  .indexContentTwo .imageBlock img{
+    width: 90%;
+  }
   .indexContentTwo .imageBlock {
-    background-size: 110%;
+    background-size: 100%;
   }
   .indexContentTwo .textBlock  {
     text-align: center;
@@ -858,7 +1007,8 @@ header.masthead h2 {
   }
   .indexContentTwo .imageBlock img{
     max-width: 700px;
-    width: 150%;
+    width: 90%;
+
   }
   .indexContentTwo .textBlock p {
     position: absolute;
@@ -869,29 +1019,33 @@ header.masthead h2 {
 }
 @media screen and (max-width: 768px) {
   .indexContentTwo .imageBlock {
-    background-size: 160%;
+    background-size: 100%;
   }
 }
 
 
 .indexContentThree .row {
   display: inline-block;
-  min-height: 500px;
+  min-height: 700px;
+  margin-top: 100px;
 }
 
 .indexContentThree .imageBlock{
   float: right;
   background-color: #f7cd30;
-  min-height: 400px;
-  background-position: left center;
-  background-repeat: no-repeat !important;
-  background-size: 50%;
+  position: relative;
+  min-height: 580px;
 }
 
 .indexContentThree .imageBlock img{
-  width: 60%;
-  max-width: 350px;
-  padding: 20px;
+  margin: auto !important;
+  padding: 0 !important;
+  width: 75%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .indexContentThree .textBlock{
@@ -903,12 +1057,11 @@ header.masthead h2 {
 .indexContentThree .textBlock .btn {
   margin-left: 25%;
   margin-top: 30px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 .indexContentThree .textBlock p {
   font-size: 35px;
-  line-height: 2rem;
   font-weight: bold;
   position: relative;
   max-width: 500px;
@@ -928,6 +1081,11 @@ header.masthead h2 {
     width: 90%;
     text-align: left;
   }
+  .indexContentThree .imageBlock img{
+    width: 70% !important;
+    max-width: 400px;
+    padding: 20px;
+  }
   .indexContentThree .textBlock .btn {
     margin-top: 30px;
   }
@@ -936,10 +1094,10 @@ header.masthead h2 {
   .indexContentThree .textBlock{
     right: 20px;
   }
-  .indexContentThree .imageBlock img{
+  .indexContentOne .imageBlock img{
     width: 75%;
     max-width: 400px;
-    padding: 20px 20px 20px 0;
+    padding: 20px;
   }
   .indexContentThree .textBlock p {
     position: absolute;
@@ -1037,6 +1195,12 @@ form .row:first-child .floating-label-form-group {
   background-color: #ca191a;
   text-decoration: none;
   color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .footer h4 {
+    font-size: 30px;
+  }
 }
 
 .contact-button {
@@ -1144,17 +1308,22 @@ a:focus, a:hover, a:active {
   display: inline-flex;
   /* Then we define how is distributed the remaining space */
   justify-content: space-between;
-  flex-wrap: wrap;
   max-width: 80%;
   left: 10%;
     right: 10%;
 }
+#nomination_name div {
+  overflow-x: scroll !important;
+  white-space: nowrap;
+}
 #nomination_name .maritime{
 height: 8vw;
-padding: 5px;
+margin: 5px;
 width: auto;
 border: 3px solid black;
 box-sizing: content-box;
+-moz-box-sizing: content-box;
+-webkit-box-sizing: content-box;
 }
 
 #nomination_name_maritime {
@@ -1166,7 +1335,9 @@ box-sizing: content-box;
   display: inline-flex;
   /* Then we define how is distributed the remaining space */
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: scroll;
 }
 #nomination_name_maritime div .maritime{
 padding: 5px;

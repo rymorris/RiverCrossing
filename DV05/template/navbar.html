@@ -1,4 +1,4 @@
-<ul class="navbar-nav ml-auto">
+<ul class="navbar-nav ml-auto pt-4">
   <li class="nav-item mx-0 mx-lg-1">
     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="what">What</a>
   </li>
@@ -21,3 +21,25 @@
     <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="nominate">Nominate</a>
   </li>
 </ul>
+
+<script type="text/javascript">
+
+    var fragmentElement = document.getElementsByClassName('nav-link');
+
+    for (var i = 0; i < fragmentElement.length; i++) {
+      var fragment = fragmentElement[i].getAttribute('href');
+
+      var url = window.location.href.split('/');
+      var last_item = '/' + url[url.length-1];
+      last_item = last_item.replace(/(\?|\#).*/, '');
+      last_item = last_item.replace('/', '');
+      last_item = last_item.replace('.html', '');
+      console.log(last_item);
+      console.log(fragment);
+      if (last_item == fragment) {
+        fragmentElement[i].classList.add('active');
+      }
+
+    }
+
+</script>
