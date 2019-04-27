@@ -136,10 +136,13 @@ section h2 {
 
 #mainNav .navbar-nav li.nav-item a.nav-link {
   color: #000;
+  padding: 16px !important;
+  margin-top: 10px;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #ca191a;
+  color: #ffffff;
+  background-color: #0272b9;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -332,7 +335,7 @@ header.masthead h2 {
   .heroContentWhat .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: calc(100vh);
+    height: calc(100vh - 60px);
   }
   .heroImgWhat {
     background: #f8cf0a url(../img/what.png) no-repeat bottom center;
@@ -478,6 +481,24 @@ header.masthead h2 {
     opacity: 0;
   }
 
+  @media screen and (min-width: 990px) {
+    /* Center and set hero image */
+    .heroContentWho .imageBlockHero {
+      text-align: center;
+      background-color: #0272b9;
+      height: calc(100vh - 60px);
+    }
+    .heroImgWho {
+      background: #0272b9 url(../img/who.png) no-repeat bottom center;
+      height: calc(90vh);
+      width: 100%;
+      background-size: 100%;
+      background-position: center 50% ;
+    }
+
+  }
+
+
   .bioImageContainerCenter {
     margin-left: auto;
     margin-right: auto;
@@ -544,22 +565,42 @@ header.masthead h2 {
   }
 
 
-@media screen and (min-width: 990px) {
+  /* Where Page */
   /* Center and set hero image */
-  .heroContentWho .imageBlockHero {
-    text-align: center;
-    background-color: #0272b9;
-    height: calc(100vh - 60px);
-  }
-  .heroImgWho {
-    background: #0272b9 url(../img/who.png) no-repeat bottom center;
-    height: calc(90vh);
-    width: 100%;
-    background-size: 100%;
-    background-position: center 50% ;
-  }
+    .heroContentWhere .imageBlockHero {
+      text-align: center;
+      background-color: #0272b9;
+      height: calc(70vw - 80px);
+    }
+    .heroImgWhere {
+      background: #0272b9 url(../img/where.png) no-repeat bottom center;
+      height: calc(85vh);
+      width: 100%;
+      background-size: 100%;
+      background-position: center 50%;
+    }
 
-}
+    .heroImgWhere > img {
+      opacity: 0;
+    }
+
+    @media screen and (min-width: 990px) {
+      /* Center and set hero image */
+      .heroContentWhere .imageBlockHero {
+        text-align: center;
+        background-color: #0272b9;
+        height: calc(100vh - 60px);
+      }
+      .heroImgWhere {
+        background: #0272b9 url(../img/where.png) no-repeat bottom center;
+        height: calc(90vh);
+        width: 100%;
+        background-size: cover;
+        background-position: center 50% ;
+      }
+
+    }
+
 
 /* When Page */
 /* Center and set hero image */
@@ -579,7 +620,7 @@ header.masthead h2 {
   .heroContentWhen .imageBlockHero {
     text-align: center;
     background-color: #f8c900;
-    height: calc(90vh - 80px);
+    height: calc(100vh - 60px);
   }
   .heroImgWhen {
     background: #f8c900 url(../img/when.png) no-repeat center;
@@ -605,6 +646,8 @@ header.masthead h2 {
   text-align: left;
 }
 
+
+
 /* Nominate Page */
 
 .heroContentNom .imageblockHero {
@@ -629,7 +672,7 @@ header.masthead h2 {
   }
   .heroImgNom {
     background: #f8cf0a url(../img/nominate.png) no-repeat bottom center;
-    height: calc(90vh);
+    height: calc(100vh - 60px);
     width: 100%;
     background-size: 60%;
   }
@@ -798,7 +841,7 @@ header.masthead h2 {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .imageBlock img {
-    padding-top: 20% !important;
+    padding-top: 15% !important;
   }
 }
 .indexContentOne .row {
@@ -808,13 +851,20 @@ header.masthead h2 {
 
 .indexContentOne .imageBlock{
   float: right;
-  background-color: #f8c900;
+  background-color: #f7cd30;
+  position: relative;
+  min-height: 580px;
 }
 
 .indexContentOne .imageBlock img{
-  width: 60%;
-  max-width: 350px;
-  padding: 20px;
+  margin: auto !important;
+  padding: 0 !important;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .indexContentOne .textBlock{
@@ -827,6 +877,7 @@ header.masthead h2 {
 .indexContentOne .textBlock .btn {
   margin-left: 25%;
   margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 .indexContentOne .textBlock p {
@@ -840,16 +891,19 @@ header.masthead h2 {
   .indexContentOne .imageBlock{
     text-align: center;
   }
-
+  .indexContentOne .imageBlock img{
+    width: 75%;
+    max-width: 400px;
+  }
   .indexContentOne .textBlock p {
     margin: 35px auto 35px auto;
     width: 90%;
   }
   .indexContentOne .textBlock p {
-    text-align: center;
+    text-align: left;
   }
   .indexContentOne .textBlock .btn {
-    text-align: center;
+    text-align: center !important;
     margin-left: 0;
   }
 }
@@ -881,7 +935,7 @@ header.masthead h2 {
 
 .indexContentTwo .imageBlock {
   float: left;
-  background-color: #f8c900;
+  background-color: #f7cd30;
   overflow: hidden;
   text-align: center;
   min-height: 400px;
@@ -890,10 +944,14 @@ header.masthead h2 {
 }
 
 .indexContentTwo .imageBlock img{
-  width: 130%;
-  max-width: 700px;
-  padding: 0;
-  transform: scale(1.33);
+  margin: auto !important;
+  padding: 0 !important;
+  width: 120%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .indexContentTwo .textBlock{
@@ -905,6 +963,7 @@ header.masthead h2 {
 .indexContentTwo .textBlock .btn {
   margin-left: 25%;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .indexContentTwo .textBlock p {
@@ -916,8 +975,11 @@ header.masthead h2 {
 }
 
 @media screen and (max-width: 990px) {
+  .indexContentTwo .imageBlock img{
+    width: 90%;
+  }
   .indexContentTwo .imageBlock {
-    background-size: 110%;
+    background-size: 100%;
   }
   .indexContentTwo .textBlock  {
     text-align: center;
@@ -941,7 +1003,8 @@ header.masthead h2 {
   }
   .indexContentTwo .imageBlock img{
     max-width: 700px;
-    width: 150%;
+    width: 90%;
+
   }
   .indexContentTwo .textBlock p {
     position: absolute;
@@ -952,7 +1015,7 @@ header.masthead h2 {
 }
 @media screen and (max-width: 768px) {
   .indexContentTwo .imageBlock {
-    background-size: 160%;
+    background-size: 100%;
   }
 }
 
@@ -960,21 +1023,25 @@ header.masthead h2 {
 .indexContentThree .row {
   display: inline-block;
   min-height: 500px;
+  margin-top: 100px;
 }
 
 .indexContentThree .imageBlock{
   float: right;
   background-color: #f7cd30;
-  min-height: 400px;
-  background-position: left center;
-  background-repeat: no-repeat !important;
-  background-size: 50%;
+  position: relative;
+  min-height: 580px;
 }
 
 .indexContentThree .imageBlock img{
-  width: 60%;
-  max-width: 350px;
-  padding: 20px;
+  margin: auto !important;
+  padding: 0 !important;
+  width: 75%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
 
 .indexContentThree .textBlock{
@@ -986,12 +1053,11 @@ header.masthead h2 {
 .indexContentThree .textBlock .btn {
   margin-left: 25%;
   margin-top: 30px;
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 .indexContentThree .textBlock p {
   font-size: 35px;
-  line-height: 2rem;
   font-weight: bold;
   position: relative;
   max-width: 500px;
@@ -1019,10 +1085,10 @@ header.masthead h2 {
   .indexContentThree .textBlock{
     right: 20px;
   }
-  .indexContentThree .imageBlock img{
+  .indexContentOne .imageBlock img{
     width: 75%;
     max-width: 400px;
-    padding: 20px 20px 20px 0;
+    padding: 20px;
   }
   .indexContentThree .textBlock p {
     position: absolute;

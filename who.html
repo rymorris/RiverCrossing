@@ -55,7 +55,29 @@
         <!-- <i class="fas fa-bars"></i> -->
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <div id="navbarReplaceJs"></div>
+        <ul class="navbar-nav ml-auto pt-4">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="what">What</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="when">When</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="where">Where</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="why">Why</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="who">Who</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="flags">Flags</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="nominate">Nominate</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -264,6 +286,28 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/riverCrossing.js"></script>
+  <script type="text/javascript">
+  function activeNavState() {
+    var fragmentElement = document.getElementsByClassName('nav-link');
+
+    for (var i = 0; i < fragmentElement.length; i++) {
+      var fragment = fragmentElement[i].getAttribute('href');
+
+      var url = window.location.href.split('/');
+      var last_item = '/' + url[url.length-1];
+      last_item = last_item.replace(/(\?|\#).*/, '');
+      last_item = last_item.replace('/', '');
+      last_item = last_item.replace('.html', '');
+      console.log(last_item);
+      console.log(fragment);
+      if (last_item == fragment) {
+        fragmentElement[i].classList.add('active');
+      }
+
+    }
+  }
+  window.onload=activeNavState;
+  </script>
 
 
 </body>
