@@ -3,20 +3,7 @@
 
   $("#footerReplaceJs").load("template/footer.html");
 
-  var fragmentElement = document.getElementsByClassName('nav-link');
-  for (var i = 0; i < fragmentElement.length; i++) {
-    var fragment = fragmentElement[i].getAttribute(href);
-
-    var url = window.location.href.split('/');
-    var last_item = '/' + url[url.length-1];
-    last_item = last_item.replace(/(\?|\#).*/, '');
-    console.log(last_item);
-    console.log(fragment);
-    if (last_item == fragment) {
-      fragmentElement[i].classList.add('active');
-    }
-
-  }
+  
 
   // mobile menu slide from the left
   $('[data-toggle="slide-collapse"]').on('click', function() {
