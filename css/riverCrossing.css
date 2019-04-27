@@ -652,12 +652,12 @@ header.masthead h2 {
 
 .heroContentNom .imageblockHero {
   text-align: center;
-  background-color: #f8ce08;
+  background-color: #cc2029;
   height: calc(100vh - 80px);
   position: relative;
 }
 .heroImgNom {
-  background: #f8cf0a url(../img/nominate.png) no-repeat bottom center;
+  background: #cc2029 url(../img/nominate.png) no-repeat bottom center;
   height: 65vh;
   width: 100%;
   background-size: contain;
@@ -667,17 +667,21 @@ header.masthead h2 {
   /* Center and set hero image */
   .heroContentNom .imageblockHero {
     text-align: center;
-    background-color: #f8ce08;
+    background-color: #cc2029;
     height: calc(100vh - 80px);
   }
   .heroImgNom {
-    background: #f8cf0a url(../img/nominate.png) no-repeat bottom center;
+    background: #cc2029 url(../img/nominate.png) no-repeat bottom center;
     height: calc(100vh - 60px);
     width: 100%;
-    background-size: 60%;
+    background-size: cover;
   }
 }
 
+.heroContentNom .textOverlay {
+  top: 100px !important;
+  color: #ffffff;
+}
 .textOverlay h2 {
   width: 80%;
   margin: 0 auto;
