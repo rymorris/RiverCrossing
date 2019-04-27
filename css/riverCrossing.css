@@ -216,7 +216,8 @@ section h2 {
     background-color: #ffffff !important;
     transition: all .4s ease;
     height: 60px;
-    position: sticky;
+    padding-top: 0;
+    /* position: sticky; */
     border-bottom: 1px solid #e6e6e6;
   }
   #mainNav.navbar-shrink .navbar-brand .logo {
